@@ -75,9 +75,12 @@ if _HERE not in sys.path:
     sys.path.insert(0, _HERE)
 _ROOT = os.path.dirname(_HERE)
 PICKS_DIR = os.path.join(_ROOT, "picks")
-BOOK_STATE_PATH = os.path.join(_ROOT, "reports", "live_book.json")
-WEB_ACCOUNT_PATH = os.path.join(_ROOT, "reports", "web_account.json")
-WEB_ORDERS_PATH = os.path.join(_ROOT, "reports", "web_orders.json")
+# EXEC_REPORTS_DIR lets another strategy (conviction-pick-sp500's dip basket) reuse
+# this script against its own account without overwriting this repo's live book.
+_REPORTS = os.environ.get("EXEC_REPORTS_DIR", os.path.join(_ROOT, "reports"))
+BOOK_STATE_PATH = os.path.join(_REPORTS, "live_book.json")
+WEB_ACCOUNT_PATH = os.path.join(_REPORTS, "web_account.json")
+WEB_ORDERS_PATH = os.path.join(_REPORTS, "web_orders.json")
 
 VOL_STALE_DAYS_WARN = 7
 ACCOUNT_STATE_MAX_AGE_MIN = 60   # --broker web: stale positions double-buy
@@ -477,7 +480,7 @@ def run_web(args, picks, picks_path, sizing_leverage, gross_target) -> None:
         created_at=stamp.isoformat(timespec="seconds"),
         mode=args.mode,
         account=acct,
-        picks=os.path.relpath(picks_path, _ROOT),
+        picks=os.path.relpath(picks_path, _REPORTS),
         equity=round(equity, 2),
         order_type="LMT", tif="DAY", outside_rth=False,
         slippage_bps=args.slippage_bps,
@@ -487,7 +490,7 @@ def run_web(args, picks, picks_path, sizing_leverage, gross_target) -> None:
         book=dict(
             executed_at=None,
             account=acct,
-            picks=os.path.relpath(picks_path, _ROOT),
+            picks=os.path.relpath(picks_path, _REPORTS),
             equity=round(equity, 2),
             leverage=args.leverage,
             vol_target=args.vol_target,
@@ -916,7 +919,7 @@ def main() -> None:
         record = dict(
             executed_at=pd.Timestamp.now().isoformat(timespec="seconds"),
             account=acct,
-            picks=os.path.relpath(picks_path, _ROOT),
+            picks=os.path.relpath(picks_path, _REPORTS),
             equity=round(equity, 2),
             leverage=args.leverage,
             vol_target=args.vol_target,

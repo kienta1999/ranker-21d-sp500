@@ -200,5 +200,8 @@ say so, and note that re-running the skill reconciles whatever did not fill.
   the rest; Yahoo only fills gaps the portal left empty.
 - Re-running the whole skill after partial fills is safe and is the intended
   way to finish a rebalance — it re-reads positions and re-diffs.
-- Account `U27177562` also exists on this login. It is **not** the strategy
-  account. Never trade it without the user asking by number.
+- Account `U27177562` also exists on this login. It is **not** this strategy's
+  account — it holds `conviction-pick-sp500`'s dip basket, traded by that
+  repo's `/stock-pick-dip-execute` (which reuses this skill's JS and
+  `execute_picks.py` with `EXEC_REPORTS_DIR` pointed at its own `reports/`).
+  Never trade it from here.
