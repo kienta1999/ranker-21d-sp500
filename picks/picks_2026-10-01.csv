@@ -1,0 +1,41 @@
+ticker,predicted_return,gics_sector,weight
+MNST,0.004596477,Consumer Staples,0.025
+CTVA,0.004254787,Materials,0.025
+CVNA,0.0042286688,Consumer Discretionary,0.025
+ORCL,0.0036958815,Information Technology,0.025
+CRWD,0.0036938554,Information Technology,0.025
+SMCI,0.0033148583,Information Technology,0.025
+INTC,0.0031719473,Information Technology,0.025
+COHR,0.0030611432,Information Technology,0.025
+COIN,0.0029357711,Financials,0.025
+CIEN,0.0028922504,Information Technology,0.025
+MRNA,0.0024765185,Health Care,0.025
+KLAC,0.0024219516,Information Technology,0.025
+GLW,0.0023317137,Information Technology,0.025
+DDOG,0.0022789289,Information Technology,0.025
+LITE,0.0021988784,Information Technology,0.025
+HPE,0.0021860343,Information Technology,0.025
+DELL,0.00214858,Information Technology,0.025
+HOOD,0.0021101788,Financials,0.025
+AXON,0.0021002884,Industrials,0.025
+MRVL,0.0020452149,Information Technology,0.025
+EIX,0.0020316248,Utilities,0.025
+APH,0.001964963,Information Technology,0.025
+WDAY,0.0019342211,Information Technology,0.025
+CHTR,0.0019078547,Communication Services,0.025
+BSX,0.0018324093,Health Care,0.025
+VRT,0.0017607403,Industrials,0.025
+IBM,0.0017509764,Information Technology,0.025
+FISV,0.0017200641,Financials,0.025
+PNR,0.0016674901,Industrials,0.025
+PODD,0.0016068113,Health Care,0.025
+APTV,0.0015745751,Consumer Discretionary,0.025
+HON,0.0015646352,Industrials,0.025
+RDDT,0.0015419986,Communication Services,0.025
+TSLA,0.0014619513,Consumer Discretionary,0.025
+GM,0.0014271425,Consumer Discretionary,0.025
+UAL,0.0014221459,Industrials,0.025
+PSKY,0.0014133193,Communication Services,0.025
+NKE,0.0013962479,Consumer Discretionary,0.025
+TSCO,0.0013948501,Consumer Discretionary,0.025
+RTX,0.0013948118,Industrials,0.025
