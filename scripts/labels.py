@@ -44,6 +44,22 @@ def forward_return(close: pd.Series, days: int = FORWARD_DAYS) -> pd.Series:
     return close.shift(-days) / close - 1
 
 
+def panel_forward_return(panel: pd.DataFrame, days: int = FORWARD_DAYS) -> pd.Series:
+    """Forward `days`-row return per ticker on a (ticker, date)-sorted panel,
+    NaN where those rows span more than ~2x the calendar time they should.
+
+    The panel only holds dates on which the ticker was an S&P 500 member, so
+    for a name that left the index and re-joined years later (JBL 2014→2023,
+    PTC 2006→2021, …) a plain `shift(-days)` would bridge the gap and
+    return a multi-year "21-day" return — +662% for JBL on 2014-10-07. 21
+    trading days are ~29-32 calendar days; anything over 2·days+5 is a gap.
+    """
+    g = panel.groupby("ticker", sort=False)
+    fwd = g["close"].shift(-days) / panel["close"] - 1
+    span = (g["date"].shift(-days) - panel["date"]).dt.days
+    return fwd.where(span <= 2 * days + 5)
+
+
 def add_label(
     panel: pd.DataFrame,
     days: int = FORWARD_DAYS,
@@ -63,9 +79,7 @@ def add_label(
 
     panel = panel.sort_values(["ticker", "date"]).reset_index(drop=True)
     raw_col = f"forward_{days}d_return"
-    panel[raw_col] = panel.groupby("ticker", sort=False)["close"].transform(
-        lambda s: s.shift(-days) / s - 1
-    )
+    panel[raw_col] = panel_forward_return(panel, days)
     if drop_na:
         panel = panel.dropna(subset=[raw_col]).reset_index(drop=True)
     if clip is not None:

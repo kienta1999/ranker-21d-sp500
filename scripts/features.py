@@ -198,6 +198,35 @@ ALL_FEATURES: list[str] = (
     + CATEGORICAL_FEATURES
 )
 
+# Bucket 9 — ranker v2 additions (2026-10). Only the v2 LambdaRank model
+# (scripts/ranker_v2.py) reads these; ALL_FEATURES above is frozen for the
+# legacy xgb_v1 booster. All nullable — rows stay eligible on the legacy
+# dropna gate even where a long window (252d, 5y seasonality) isn't full.
+#   mom_12_1            close[t-21] / close[t-252] - 1 (12-1 momentum)
+#   ret_126d            6-month return
+#   idio_vol_60d        residual vol vs SPY over 60d, annualised
+#   max_ret_21d         max daily return over 21d (MAX / lottery demand)
+#   skew_60d            skewness of daily returns, 60d
+#   amihud_21d          log1p(1e9 · mean(|r| / dollar volume)), 21d
+#   log_dollar_vol_63d  log mean dollar volume, 63d (size / liquidity)
+#   dvol_trend          log(dollar vol 21d / dollar vol 252d)
+#   dist_52w_low        close / 252d low - 1
+#   info_discrete       sign(ret_252d) · (%neg days - %pos days), 252d (frog-in-the-pan)
+#   seasonal_ret        mean same-calendar-window 21d return at annual lags 1..5
+#   ret_5d              short-term reversal input (was pruned from v1)
+#   ear_3d              abnormal return vs SPY over [e-1, e+1] around the latest
+#                       earnings announcement, visible from e+2, held ≤63 days
+# Panel-level: equal-weighted sector mean returns and within-sector ranks.
+V2_TICKER_FEATURES: list[str] = [
+    "mom_12_1", "ret_126d", "idio_vol_60d", "max_ret_21d", "skew_60d",
+    "amihud_21d", "log_dollar_vol_63d", "dvol_trend", "dist_52w_low",
+    "info_discrete", "seasonal_ret", "ret_5d", "ear_3d",
+]
+V2_SECTOR_FEATURES: list[str] = [
+    "sector_ret_63d", "sector_ret_21d", "mom_12_1_secrank", "idio_vol_60d_secrank",
+]
+V2_FEATURES: list[str] = V2_TICKER_FEATURES + V2_SECTOR_FEATURES
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Bucket 1 — per-ticker technicals
@@ -573,6 +602,85 @@ def attach_insider_features(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Bucket 9 — ranker v2 additions (per-ticker part)
+# ─────────────────────────────────────────────────────────────────────────────
+
+_EAR_HOLD = 63  # trading days an earnings-announcement return stays visible
+
+
+def compute_v2_ticker_features(
+    prices: pd.DataFrame,
+    spy: pd.DataFrame,
+    earnings_dates: pd.DatetimeIndex,
+) -> pd.DataFrame:
+    """V2_TICKER_FEATURES (except ret_5d, which Bucket 1 already computes)
+    for one ticker, indexed by Date. Trailing-only."""
+    c, v = prices["Close"], prices["Volume"]
+    r = c.pct_change()
+    out = pd.DataFrame(index=prices.index)
+    out["mom_12_1"] = c.shift(21) / c.shift(252) - 1
+    out["ret_126d"] = c.pct_change(126)
+    # ret_5d is already on the frame from compute_per_ticker_features.
+
+    spy_r = spy["Close"].pct_change().reindex(prices.index)
+    var_s = spy_r.rolling(60).var()
+    beta = r.rolling(60).cov(spy_r) / var_s
+    resid_var = (r.rolling(60).var() - beta**2 * var_s).clip(lower=0)
+    out["idio_vol_60d"] = np.sqrt(resid_var) * np.sqrt(252)
+
+    out["max_ret_21d"] = r.rolling(21).max()
+    out["skew_60d"] = r.rolling(60).skew()
+
+    dv = c * v
+    illiq = (r.abs() / dv.replace(0, np.nan)).rolling(21, min_periods=15).mean()
+    out["amihud_21d"] = np.log1p(1e9 * illiq)
+    out["log_dollar_vol_63d"] = np.log(dv.rolling(63, min_periods=40).mean().replace(0, np.nan))
+    out["dvol_trend"] = np.log(dv.rolling(21).mean() / dv.rolling(252, min_periods=150).mean())
+
+    out["dist_52w_low"] = c / c.rolling(252).min() - 1
+
+    pos = (r > 0).astype(float).rolling(252).mean()
+    neg = (r < 0).astype(float).rolling(252).mean()
+    out["info_discrete"] = np.sign(c.pct_change(252)) * (neg - pos)
+
+    # Heston-Sadka seasonality: the 21d return over (t-252k, t-252k+21],
+    # i.e. "the coming month" k years ago — always fully in the past.
+    lagged = [c.shift(252 * k - 21) / c.shift(252 * k) - 1 for k in range(1, 6)]
+    seasonal = pd.concat(lagged, axis=1).mean(axis=1, skipna=True)
+    out["seasonal_ret"] = seasonal.where(c.shift(504).notna())
+
+    # Earnings-announcement abnormal return. The 8-K can land before the open
+    # or after the close, so the window spans the day before through the day
+    # after; it is only written on the second trading day after the 8-K date.
+    ear = np.full(len(out), np.nan)
+    if len(earnings_dates):
+        idx = prices.index
+        logc = np.log(c).to_numpy()
+        logs = np.log((1 + spy_r.fillna(0)).cumprod()).to_numpy()
+        for e in earnings_dates:
+            p = idx.searchsorted(e)
+            if p < 1 or p + 2 >= len(idx):
+                continue
+            ear[p + 2] = (logc[p + 1] - logc[p - 1]) - (logs[p + 1] - logs[p - 1])
+    out["ear_3d"] = pd.Series(ear, index=out.index).ffill(limit=_EAR_HOLD)
+    return out
+
+
+def add_v2_sector_features(panel: pd.DataFrame) -> pd.DataFrame:
+    """V2_SECTOR_FEATURES (panel-level, contemporaneous cross-section only)."""
+    panel = panel.copy()
+    gs = panel.groupby(["date", "gics_sector"], observed=True, sort=False)
+    panel["sector_ret_63d"] = gs["ret_63d"].transform("mean")
+    panel["sector_ret_21d"] = gs["ret_21d"].transform("mean")
+    panel["mom_12_1_secrank"] = gs["mom_12_1"].rank(pct=True)
+    panel["idio_vol_60d_secrank"] = gs["idio_vol_60d"].rank(pct=True)
+    is_unknown = panel["gics_sector"] == UNKNOWN_SECTOR
+    if is_unknown.any():
+        panel.loc[is_unknown, V2_SECTOR_FEATURES] = np.nan
+    return panel
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Bucket 2b — broadcast market-regime features (panel-level, same value
 # per date for every ticker). Earn reward only via interactions with
 # cross-sectional features under date-demeaned labels.
@@ -759,6 +867,10 @@ def build_panel(
         feats = attach_insider_features(
             feats, insider_by_ticker.get(ticker)
         )
+        # Earnings-announcement return uses historical 8-K dates only — a
+        # yfinance "upcoming" date is in the future and has no return yet.
+        edates = earnings_by_ticker.get(ticker, pd.DatetimeIndex([]))
+        feats = feats.join(compute_v2_ticker_features(df, spy, edates[edates <= df.index[-1]]))
         feats["ticker"] = ticker
         frames.append(feats)
 
@@ -785,6 +897,7 @@ def build_panel(
 
     print("Computing sector-relative excess returns...", flush=True)
     panel = add_sector_relative_returns(panel)
+    panel = add_v2_sector_features(panel)
 
     print("Attaching broadcast market-regime features (SPY trend / VIX)...", flush=True)
     regime = compute_market_regime_features(spy, vix)
@@ -815,6 +928,7 @@ def build_panel(
         + SECTOR_FEATURES
         + EARNINGS_FEATURES + FUNDAMENTAL_FEATURES + RANK_FEATURES
         + INSIDER_FEATURES
+        + V2_FEATURES
         + ["ret_1d", "close"]
     )
     panel = panel[cols_order].sort_values(["ticker", "date"]).reset_index(drop=True)

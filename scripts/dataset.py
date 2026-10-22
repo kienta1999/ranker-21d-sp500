@@ -42,8 +42,11 @@ from features import (  # noqa: E402
     MARKET_FEATURES,
     NULLABLE_FEATURES,
     PER_TICKER_FEATURES,
+    V2_TICKER_FEATURES,
     compute_features,
+    compute_v2_ticker_features,
 )
+from earnings import load_earnings_dates  # noqa: E402
 from labels import LABEL_COL  # noqa: E402
 from strategy import DEFAULT_SEED  # noqa: E402
 
@@ -165,7 +168,8 @@ def prepare(panel: pd.DataFrame | None = None) -> Splits:
 
 # Features we can verify by recomputing from truncated raw prices for a single
 # ticker. Excludes RANK_FEATURES (need full panel cross-section) and the
-# categorical sector (no math involved).
+# categorical sector (no math involved). Bucket-9 (ranker v2) per-ticker
+# features are verified too when the panel carries them.
 _VERIFIABLE_COLS: list[str] = PER_TICKER_FEATURES + MARKET_FEATURES
 
 
@@ -180,6 +184,8 @@ def assert_no_lookahead(
     the panel value. Raises AssertionError on any mismatch.
     """
     spy = load_market()["SPY"]
+    v2_cols = [c for c in V2_TICKER_FEATURES if c in panel.columns]
+    earn = load_earnings_dates(include_upcoming=False) if v2_cols else None
 
     # Skip very early dates where features wouldn't have warmed up at all.
     candidates = panel[panel["date"] >= "2010-01-01"]
@@ -212,9 +218,12 @@ def assert_no_lookahead(
             continue
 
         feats = compute_features(prices_trunc, spy.loc[:d])
+        if v2_cols:
+            ed = pd.DatetimeIndex(earn.loc[earn["ticker"] == t, "report_date"]).sort_values()
+            feats = feats.join(compute_v2_ticker_features(prices_trunc, spy.loc[:d], ed[ed <= d]))
         recomputed = feats.iloc[-1]
 
-        for col in _VERIFIABLE_COLS:
+        for col in _VERIFIABLE_COLS + v2_cols:
             actual = row[col]
             new = recomputed[col]
             if pd.isna(actual) and pd.isna(new):
@@ -234,7 +243,7 @@ def assert_no_lookahead(
 
     print(
         f"\n[OK] No lookahead detected: {n_checked} (ticker, date) rows "
-        f"× {len(_VERIFIABLE_COLS)} features verified."
+        f"× {len(_VERIFIABLE_COLS) + len(v2_cols)} features verified."
     )
 
 

@@ -1,0 +1,22 @@
+          variant    cagr sharpe   maxdd     vol cagr_min cagr_max       ic  ic_t
+dev   wf_base_st3  +19.5%   0.84  -33.9%  +23.3%   +17.1%   +22.4%  +0.0016  0.15
+hold  wf_base_st3  +28.9%   1.37  -16.6%  +21.2%   +25.2%   +36.0%  +0.0145  0.82
+          variant    cagr sharpe   maxdd     vol cagr_min cagr_max       ic  ic_t
+dev   wf_rank_st3  +18.8%   0.86  -33.0%  +22.0%   +17.1%   +21.4%  +0.0037  0.31
+hold  wf_rank_st3  +19.5%   1.06  -15.6%  +18.6%   +16.8%   +25.3%  +0.0089  0.52
+          variant    cagr sharpe   maxdd     vol cagr_min cagr_max       ic   ic_t
+dev   wf_t300_st3  +19.9%   0.84  -33.7%  +23.7%   +17.0%   +22.0%  -0.0014  -0.11
+hold  wf_t300_st3  +27.1%   1.30  -17.3%  +20.9%   +23.2%   +32.9%  +0.0173   0.95
+               variant    cagr sharpe   maxdd     vol cagr_min cagr_max       ic  ic_t
+dev   wf_lr02_t300_st3  +21.1%   0.90  -34.9%  +23.5%   +19.5%   +23.9%  +0.0058  0.55
+hold  wf_lr02_t300_st3  +21.1%   1.17  -17.0%  +18.1%   +16.8%   +27.7%  +0.0113  0.72
+          variant    cagr sharpe   maxdd     vol cagr_min cagr_max       ic   ic_t
+dev   lgb_reg_st3  +19.0%   0.85  -35.3%  +22.4%   +16.3%   +21.1%  +0.0195   1.45
+hold  lgb_reg_st3  +14.3%   0.96  -12.5%  +14.9%    +8.5%   +18.5%  -0.0078  -0.38
+           variant    cagr sharpe   maxdd     vol cagr_min cagr_max       ic  ic_t
+dev   lgb_rank_st3  +22.6%   0.87  -38.8%  +26.2%   +20.9%   +24.1%  +0.0188  1.83
+hold  lgb_rank_st3  +29.1%   1.36  -16.8%  +21.4%   +22.7%   +37.4%  +0.0131  1.00
+           variant    cagr sharpe   maxdd     vol cagr_min cagr_max       ic   ic_t
+dev   wf_extra_st3  +20.4%   0.89  -33.5%  +23.0%   +17.9%   +23.9%  -0.0064  -0.57
+hold  wf_extra_st3  +27.6%   1.34  -16.4%  +20.8%   +21.5%   +32.8%  +0.0170   0.90
+QUEUE1_DONE

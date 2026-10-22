@@ -1,0 +1,33 @@
+
+Wrote /home/user/ranker-21d-sp500/data/processed/panel.parquet
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+Walk-forward ranker v2 (3 seeds, stride 3)...
+  fold 2012: train ≤2011-11-30 (105,073 rows), test 70,612 rows (22s)
+  fold 2013: train ≤2012-11-29 (128,718 rows), test 73,479 rows (28s)
+  fold 2014: train ≤2013-11-29 (153,162 rows), test 75,265 rows (31s)
+  fold 2015: train ≤2014-12-01 (178,172 rows), test 77,788 rows (37s)
+  fold 2016: train ≤2015-12-01 (204,025 rows), test 82,322 rows (39s)
+  fold 2017: train ≤2016-11-30 (231,327 rows), test 86,807 rows (48s)
+  fold 2018: train ≤2017-11-29 (259,893 rows), test 89,979 rows (49s)
+  fold 2019: train ≤2018-11-28 (289,905 rows), test 93,395 rows (57s)
+  fold 2020: train ≤2019-11-29 (320,909 rows), test 99,470 rows (61s)
+  fold 2021: train ≤2020-12-01 (353,818 rows), test 102,436 rows (64s)
+  fold 2022: train ≤2021-12-01 (387,875 rows), test 105,086 rows (69s)
+  fold 2023: train ≤2022-11-30 (422,919 rows), test 108,972 rows (78s)
+  fold 2024: train ≤2023-11-29 (458,980 rows), test 113,728 rows (85s)
+  fold 2025: train ≤2024-11-29 (496,769 rows), test 117,093 rows (90s)
+  fold 2026: train ≤2025-12-01 (535,985 rows), test 96,952 rows (96s)
+  -> /home/user/ranker-21d-sp500/data/processed/ranker_v2_oos.parquet  (1,393,384 rows, 2012-01-03 → 2026-10-21)
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+Training ranker v2 on all realised labels ≤2026-09-22 (3 seeds, stride 3)...
+  -> /home/user/ranker-21d-sp500/models/ranker_v2  (568,122 rows, 44 features)
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+seed 1: best_iteration=13
+seed 2: best_iteration=17
+seed 3: best_iteration=64
+seed 4: best_iteration=3
+seed 5: best_iteration=19
+PROD_DONE

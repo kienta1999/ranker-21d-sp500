@@ -1,0 +1,13 @@
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+Loaded 2,051,528 rows; dropped 318,927 early-window NaN → 1,732,601 usable rows.
+Trimmed 28,443 pre-2007-01-01 buffer rows → 1,704,158 model-ready rows.
+{'model': 'v2', 'n': 20, 'hold': 63, 'lev': '+1.350', 'var': 'voltgt', 'drift': 0, 'dev_cagr': '+0.209', 'dev_sh': '+0.660', 'dev_dd': '-0.577', 'hold_cagr': '+0.539', 'hold_sh': '+1.640', 'hold_dd': '-0.346', '2021+_cagr': '+0.395', '2021+_sh': '+1.172', '2021+_dd': '-0.346'}
+{'model': 'v2', 'n': 40, 'hold': 63, 'lev': '+1.350', 'var': 'voltgt', 'drift': 0, 'dev_cagr': '+0.193', 'dev_sh': '+0.674', 'dev_dd': '-0.544', 'hold_cagr': '+0.466', 'hold_sh': '+1.558', 'hold_dd': '-0.323', '2021+_cagr': '+0.352', '2021+_sh': '+1.154', '2021+_dd': '-0.323'}
+
+end 2026-09-22  sector_cap=0.4 vol_target=0.2
+model  n  hold  lev    var  drift dev_cagr dev_sh dev_dd hold_cagr hold_sh hold_dd 2021+_cagr 2021+_sh 2021+_dd
+   v2 20    63 1.35 voltgt      0   +20.9%   0.66 -57.7%    +53.9%    1.64  -34.6%     +39.5%     1.17   -34.6%
+   v2 40    63 1.35 voltgt      0   +19.3%   0.67 -54.4%    +46.6%    1.56  -32.3%     +35.2%     1.15   -32.3%
+  SPY  0     0 1.00      -      0   +12.6%   0.74 -33.7%    +22.7%    1.51  -18.8%     +15.4%     0.93   -24.5%
+FINAL_DONE

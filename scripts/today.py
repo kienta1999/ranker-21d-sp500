@@ -61,7 +61,7 @@ from data import load_market  # noqa: E402
 from features import load_features  # noqa: E402
 
 _ROOT = os.path.dirname(_HERE)
-MODEL_PATH = os.path.join(_ROOT, "models", "xgb_v1.json")
+MODEL_PATH = os.path.join(_ROOT, "models", "ranker_v2")
 PICKS_DIR = os.path.join(_ROOT, "picks")
 BOOK_STATE_PATH = os.path.join(_ROOT, "reports", "live_book.json")
 

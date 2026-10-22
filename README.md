@@ -1,11 +1,19 @@
 # ranker-21d-sp500
 
-ML-based S&P 500 stock ranker. Predict each stock's forward 21-trading-day
-return independently with XGBoost, sort to get a daily ranking, long the top
-decile, hold 21 trading days, rebalance monthly with a **vol-targeted
-sizing overlay** (replaces the legacy SPY/VIX regime gate as of 2026-05-11).
+ML-based S&P 500 stock ranker. Score every member stock on its forward
+21-trading-day return, sort to get a daily ranking, long the top 40, hold,
+rebalance with a **vol-targeted sizing overlay**.
 
-**Current status (+ 3 FRED macro features + vol-target overlay +
+> **2026-10: the default model is now ranker v2** (`models/ranker_v2/`,
+> `scripts/ranker_v2.py`) — LightGBM LambdaRank on per-date percentile
+> features, retrained on *all* realised data, backtested by annual
+> walk-forward. The legacy XGBoost model (`models/xgb_v1.json`) still loads
+> via `--model models/xgb_v1.json`. Read [Ranker v2](#ranker-v2-2026-10-walk-forward-lambdarank)
+> first — it also corrects a label bug and re-baselines what this strategy
+> actually earns. Everything below that section describes v1 and is kept as
+> the project history.
+
+**v1 status as of 2026-05 (+ 3 FRED macro features + vol-target overlay +
 cataclysmic-only quality filter, 200-trial sweep on 47 features, seed 15):**
 raw long-only **+24.3% CAGR / Sharpe 0.95 vs SPY +13.6% /
 Sharpe 0.80** (test 2021-01-04 → 2026-04-09). Strategy delivers
@@ -85,6 +93,164 @@ rates → +10.9% effective). For taxable accounts the strategy needs
 
 This is the ranking-style sibling of `technical-analysis-stock-scanner`, which
 filters and picks. Here we score and sort.
+
+---
+
+## Ranker v2 (2026-10, walk-forward LambdaRank)
+
+### TL;DR
+
+- **What changed:** LightGBM LambdaRank (per-date query groups, top-50
+  truncation) instead of XGBoost RMSE regression; every per-ticker feature
+  replaced by its per-date percentile; 17 new features (Bucket 9); broadcast
+  SPY/VIX/FRED regime features dropped; 3-seed ensemble; trained on **every
+  realised label** instead of a frozen 2007-2017 window; backtested by an
+  **annual expanding walk-forward**, so every backtest prediction is
+  out-of-sample and the live model is just the newest fold.
+- **Does it earn more?** Versus the v1 *recipe*, yes: refitting v1 exactly
+  (same params, train 2007-17, early-stop on 2018-20) with 6 seeds gives
+  2021+ CAGR 18.8–26.7% (mean ≈22.9%) and 2023+ 25.0–34.0% (mean ≈29.5%);
+  v2 gives **26.5%** and **34.2%** without any selection. Versus the
+  *committed* `xgb_v1.json` (27.6% / 33.2%), it's a tie: that file sits at
+  the top of its own recipe's seed range — the draw kept after many sweeps
+  scored on 2021+.
+  At the live config (top-40, 63d, 1.35x, cap 0.4) v2 is +0.3 CAGR pt on
+  2021+ (+3.3 on 2023+, −3.5 in the 2021-22 bear) at lower Sharpe (1.03 vs
+  1.11) and a deeper MaxDD (−32% vs −29%); at top-20 the committed v1 leads.
+- **What the strategy actually is:** a high-volatility tilt. A model-free
+  "top-40 highest 60d vol" screen earns about the same as *both* models
+  (table below). Neither model has much skill beyond volatility
+  (within-vol-quintile rank IC t-stats 0.4–2.2). Because yfinance is missing
+  ~290 delisted names — disproportionately high-vol failures — this is
+  exactly the tilt survivorship bias flatters most. **Treat every absolute
+  number in this README as optimistic** until paid delisted-ticker data
+  lands (TODO §6). yfinance also serves a few corrupt series (CPWR: a $0.24
+  close in 2011; EP) — v2 never picked them, but they sit in the panel.
+- **Bug fixed (affects v1 too):** `labels.py` computed the 21-day forward
+  return with `shift(-21)` over member-only rows, so a ticker that left the
+  index and re-joined years later got a multi-year "21-day" return (JBL
+  2014-10-07: +662% over 9 years; PTC: 14 years). 336 rows / 16 tickers.
+  Training clipped them to +50% (still wrong labels); research metrics that
+  used unclipped forward returns were inflated. Fixed in
+  `labels.panel_forward_return` (NaN when the 21 rows span > 47 calendar
+  days). `backtest.py` was never affected — it compounds `ret_1d`.
+- **Why switch anyway:** v2 learns from 2018-2026 (v1 never will), is
+  insensitive to its hyperparameters (11-config grid all within noise —
+  nothing to over-tune), needs no optuna sweep, and is re-trainable with one
+  command. v1 is a frozen 2017 snapshot that only ages.
+
+### Evaluation protocol (fixed before the first experiment)
+
+- **Walk-forward:** for each year Y ≥ 2012, train on all rows whose 21-day
+  label is realised before Y's first trading day (purge = 22 trading days),
+  predict Y. Expanding window from 2007.
+- **DEV 2012-01 → 2022-12** — every choice (model, features, params) was
+  made here. **HOLDOUT 2023-01 → latest** — only looked at to confirm.
+- Fast evaluator (`research/wf_lib.py`): equal-weight top-40 after the
+  quality filter, 21 rebalance offsets, buy-and-hold within the 21-day
+  period, 5 bps/side. Finalists re-checked on `backtest.py`'s daily engine.
+- Caveat on "2021+" numbers for the committed v1 model: its *training* never
+  saw 2021+, but it was *selected* on 2021+ backtests, so they're optimistic.
+
+### Results — fast evaluator, top-40, 1.0x, no overlay / cap (after the label fix)
+
+CAGR / Sharpe (Sharpe = CAGR / vol, the repo convention).
+
+| Scores                                                   | DEV 2012-22   | HOLDOUT 2023+ | 2021+         |
+| -------------------------------------------------------- | ------------- | ------------- | ------------- |
+| **v2 (production walk-forward)**                         | **21.4% / 0.84** | **34.2% / 1.50** | **26.5% / 1.08** |
+| v1 params, retrained annually (walk-forward)             | 19.8% / 0.86  | 27.5% / 1.36  | 20.8% / 0.91  |
+| v1 recipe re-fit, 6 seeds (range)                        | in-sample     | 25.0–34.0% / 1.25–1.54 | 18.8–26.7% / 0.86–1.18 |
+| committed `xgb_v1.json`                                  | in-sample     | 33.2% / 1.51  | 27.6% / 1.19  |
+| model-free: 40 highest `vol_60d`                         | 21.5% / 0.83  | 34.5% / 1.44  | 28.7% / 1.14  |
+| random 40 names                                          | 14.0% / 0.87  | 12.6% / 0.96  | 11.5% / 0.79  |
+| equal-weight universe                                    | 15.7% / 1.00  | 14.5% / 1.16  | 13.1% / 0.94  |
+| SPY                                                      | 12.6% / 0.74  | 22.7% / 1.51  | 15.4% / 0.93  |
+
+What moved DEV (research runs: single seed, stride 3, each row adds one
+change; the production run above differs from the last row by seed noise):
+
+| Step                                                          | DEV           | HOLDOUT       |
+| ------------------------------------------------------------- | ------------- | ------------- |
+| v1 params, walk-forward, raw features (stride 3)              | 18.1% / 0.78  | 28.9% / 1.37  |
+| + per-date percentile features ("rank-all")                   | 19.9% / 0.85  | 27.8% / 1.24  |
+| + 17 Bucket-9 features                                        | 20.5% / 0.86  | 33.0% / 1.50  |
+| + LightGBM LambdaRank (decile grades, truncation 50)          | 22.1% / 0.85  | 34.4% / 1.53  |
+| − broadcast regime features (neutral; dropped for simplicity) | 21.4% / 0.84  | 35.4% / 1.57  |
+
+Tried and **not** adopted (DEV, same evaluator): percentile-rank label
+(17.6%), sector-neutral label (18.3%), 63-day label (worse in both XGB and
+LambdaRank), top-decile binary classifier (21.2% — better than regression,
+below LambdaRank), LightGBM regression, more/fewer XGB trees, rolling 8-year
+window (21.3% DEV, 29.9% HOLDOUT), 5 seeds vs 3 (identical), stride-1 vs
+stride-3 training (no better), LambdaRank grid over rounds 150-1000 /
+leaves 15-63 / min_data_in_leaf 500-8000 / truncation 20-150 / xendcg /
+feature_fraction 0.3 (all 20.8–22.3% DEV — noise), blends with the XGB
+walk-forward models (worse DEV), inverse-vol basket weights (Sharpe flat,
+CAGR lower). Each Bucket-9 group removed one at a time cost 0.4–0.9 DEV pts.
+
+### Results — `backtest.py` daily engine, live config
+
+Sector cap 0.40, vol-target 0.20, margin 6.13%, quality filter on. Both
+models scored from 2021-01-01 with identical treatment (rows from a
+2021 start, so h=63 offsets begin partly in cash — compare across rows,
+not to the 2012-start numbers).
+
+| Model, top-N, hold, leverage | 2021-22 | 2023+ | 2021+ CAGR / Sharpe / MaxDD |
+| ---------------------------- | ------- | ----- | --------------------------- |
+| **v1 committed, 40, 63d, 1.35x (current live)** | 10.6% | 43.0% | 30.7% / 1.11 / −28.6% |
+| **v2, 40, 63d, 1.35x**       | 7.1%    | 46.3% | 31.0% / 1.03 / −32.3% |
+| v1 committed, 20, 63d, 1.35x | 14.2%   | 55.1% | 39.3% / 1.22 / −28.7% |
+| v2, 20, 63d, 1.35x           | 6.9%    | 53.8% | 35.1% / 1.06 / −34.7% |
+| v2, 20, 21d, 1.35x           | 11.8%   | 51.2% | 35.7% / 1.05 / −35.2% |
+| v2, 40, 21d, 1.0x            | 7.8%    | 35.6% | 25.0% / 0.99 / −29.1% |
+| SPY                          | 3.4%    | 22.7% | 15.4% / 0.93 / −24.5% |
+
+**At the live config the two models are even:** v2 +0.3 CAGR pt on 2021+
+(+3.3 on 2023+, −3.5 in the 2021-22 bear) at lower Sharpe and a deeper
+drawdown; at top-20 the committed v1 is ahead. Keep in mind the committed
+v1's 2021+ edge over its own recipe is selection, which does not repeat
+out of sample — v2's numbers have no selection in them.
+
+v2 from 2012 on the daily engine (DEV slice of one continuous run):
+top-40 / 63d / 1.35x → 19.3% CAGR, Sharpe 0.67, MaxDD −54% (2020); top-20 →
+20.9% / 0.66 / −58%. The levered book's MaxDD over a full cycle is ~−55%,
+not the −29% the calm 2021+ window shows.
+
+**Knobs, in order of how much they move CAGR:** basket size (top-20 ≈ +4-9
+pts over top-40 at similar Sharpe, deeper drawdowns — the old README's
+2008 stress test says top-20 is the more fragile basket), leverage (1.35x
+≈ +5-8 pts, Sharpe falls because borrow costs 6.13%), hold 21d vs 63d (a
+wash gross; 63d wins on fees/taxes), the model (≈ ±1-4 pts), weighting /
+cap (≈ 0). The live config is **not changed** by this work — those are
+risk choices, not model choices.
+
+`backtest.py --drift` (new) lets weights drift with prices between
+rebalances instead of the historical fixed-weight (free daily rebalance)
+convention. Measured on 2012-2026 top-40: ≤1 CAGR pt either way, so old
+numbers stand.
+
+### Running it
+
+```bash
+uv run python scripts/features.py            # Bucket 9 is built with the rest of the panel
+uv run python scripts/labels.py              # re-entry-safe labels
+uv run python scripts/ranker_v2.py train         # live model on all realised labels → models/ranker_v2/ (~3 min)
+uv run python scripts/ranker_v2.py walkforward   # OOS scores 2012→ → data/processed/ranker_v2_oos.parquet (~20 min)
+uv run python scripts/backtest.py                # v2 by default (walk-forward scores), from TEST_START=2021
+uv run python scripts/backtest.py --start 2012-01-01 --leverage 1.35 --hold-days 63 --sector-cap 0.4
+uv run python scripts/backtest.py --model models/xgb_v1.json   # legacy model, same flags
+uv run python scripts/today.py --sector-cap 0.4  # live picks with v2
+uv run python scripts/test_ranker_v2.py          # self-check (synthetic panel, ~5 s)
+```
+
+**Retrain cadence:** v2 only improves if it sees new data. Run
+`run_all.py --retrain` (train + walk-forward + backtest, ~25 min) before each
+quarterly rebalance. The daily `run_all.py` scores with the existing model,
+as before.
+
+Research tooling (walk-forward harness, every experiment queue and its log)
+lives in [`research/`](research/README.md).
 
 ---
 
@@ -178,6 +344,9 @@ uv run python scripts/train.py                      # optuna tuning + final fit 
 uv run python scripts/train.py --trials 20          # faster tune
 uv run python scripts/train.py --quick              # skip tuning, use sane defaults
 uv run python scripts/train.py --quick --seed 3     # vary RNG (XGBoost + optuna) for stability-selection sweeps
+# ↑ legacy v1 (models/xgb_v1.json). Ranker v2 (the default since 2026-10):
+uv run python scripts/ranker_v2.py train             # full-data LambdaRank ensemble → models/ranker_v2/ (~3 min)
+uv run python scripts/ranker_v2.py walkforward       # annual walk-forward OOS scores the backtest reads (~20 min)
 
 uv run python scripts/backtest.py                    # long-only raw + vol-targeted overlay + quality filter, 21 shifted starts (~1 min)
 uv run python scripts/backtest.py --no-overlay       # skip vol-target variant (raw only)
@@ -323,7 +492,8 @@ have no forward-return label yet; `today.py` deliberately predicts on them.
 >   Skip a year of runs and it still catches up cleanly
 > - **Fundamentals** — EDGAR XBRL incremental, only new filings
 > - **Features / labels** — pure local recompute against the freshened caches
-> - **Today** — scores against the existing `models/xgb_v1.json`, writes
+> - **Today** — scores against the existing `models/ranker_v2/` (v1:
+>   `--model models/xgb_v1.json`), writes
 >   `picks/picks_<date>.csv`, auto-diffs against the most recent prior file,
 >   and runs the **daily de-risk check**: recomputes
 >   `min(1.35, 0.20 / spy_vol_20d)` and yells "⚠⚠ DE-RISK … SELL DOWN TODAY"
@@ -331,9 +501,10 @@ have no forward-return label yet; `today.py` deliberately predicts on them.
 >   (`reports/live_book.json`) — the daily crash guard for the
 >   quarterly-rebalanced levered book
 >
-> Want a model that actually _learns_ on the new data (e.g. after a feature
-> change like the 8-K anchor switch)? Run `run_all.py --retrain` instead —
-> same catch-up flow, plus train + backtest at the end.
+> Want a model that actually _learns_ on the new data? Run
+> `run_all.py --retrain` instead — same catch-up flow, plus the ranker v2
+> full-data refit, the walk-forward OOS refresh and a backtest at the end
+> (~25 min). Do this before every quarterly rebalance.
 >
 > Just want to pull caches now and finish later? `run_all.py --download-only`
 > stops after the raw-data refresh.
@@ -737,6 +908,36 @@ freshest filings have a publication lag; live picks already lag features by
 | Feature       | Source                                                         | Purpose                                                                                                                                                                                                                                |
 | ------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `gics_sector` | `data/universe/sp500_sectors.csv` (Wikipedia, current members) | XGBoost native categorical. Lets the model split on sector membership without manual encoding — captures effects like "utilities react differently to vol than tech." Tickers no longer in the index fall into the `"Unknown"` bucket. |
+
+### Bucket 9 — ranker v2 additions (17, added 2026-10)
+
+Built by `features.compute_v2_ticker_features` / `add_v2_sector_features`
+and written to `features.parquet` alongside everything else. Only ranker v2
+reads them (`features.V2_FEATURES`); `ALL_FEATURES` is frozen for
+`xgb_v1.json`. All nullable. `dataset.assert_no_lookahead()` recomputes the
+per-ticker ones on truncated history.
+
+| Feature | Definition | Why |
+| --- | --- | --- |
+| `mom_12_1` | `close[t-21] / close[t-252] - 1` | Classic 12-1 momentum (skips the reversal month) |
+| `ret_126d` | 6-month return | Intermediate momentum |
+| `idio_vol_60d` | residual vol vs SPY, 60d, annualised | Idiosyncratic risk (Ang et al. 2006) — 3rd-largest v2 importance |
+| `max_ret_21d` | max daily return, 21d | Lottery demand / MAX (Bali-Cakici-Whitelaw 2011) |
+| `skew_60d` | daily-return skewness, 60d | Same family as MAX |
+| `amihud_21d` | `log1p(1e9 · mean(|r| / $vol))`, 21d | Illiquidity (Amihud 2002) — TODO §10 |
+| `log_dollar_vol_63d` | log mean dollar volume, 63d | Size / liquidity proxy |
+| `dvol_trend` | `log($vol 21d / $vol 252d)` | Attention shift |
+| `dist_52w_low` | `close / 252d low - 1` | Pair to `dist_52w_high` |
+| `info_discrete` | `sign(ret_252d) · (%neg − %pos days)` | Frog-in-the-pan (Da-Gurun-Warachka 2014) |
+| `seasonal_ret` | mean of the same-calendar 21d window's return at annual lags 1-5 | Return seasonality (Heston-Sadka 2008) |
+| `ret_5d` | 5-day return (revived from v1's pruned list) | Short-term reversal |
+| `ear_3d` | abnormal return vs SPY over [e−1, e+1] around the last 8-K item 2.02, visible from e+2, held 63 days | Earnings-announcement drift |
+| `sector_ret_63d`, `sector_ret_21d` | equal-weighted (date, sector) mean return | Industry momentum |
+| `mom_12_1_secrank`, `idio_vol_60d_secrank` | within-(date, sector) percentile | Sector-neutral versions |
+
+v2 gain share (`reports/ranker_v2_feature_importance.csv`): `vol_60d` 23%,
+`atr_pct` 16%, `idio_vol_60d` 9%, `gics_sector` 4%, then a long flat tail —
+the volatility block is half the model.
 
 ### Why some popular indicators are _not_ included
 
@@ -1970,7 +2171,7 @@ better spent on the ranking objective.
 - [x] retrain on the pruned 40-feature set (50-trial sweep) and re-run backtest. **Result**: raw +19.0% CAGR / Sharpe 0.76 (first time > SPY's 0.75); `best_iteration` lifted to 43 with `lr=0.0058` — the cleaner feature set unlocked a slow-build basin the 61-feature config couldn't find. Saved as `models/xgb_v1_stability_pruned.json`.
 - [x] retrain on the 44-feature set with insiders (50-trial sweep) and re-run backtest. **Result**: raw +21.0% CAGR / Sharpe 0.81 (Sharpe gap over SPY widens from +0.01 to +0.06); `best_iteration=13`, `lr=0.0051`. MaxDD widens -25.8% → -31.7% (Calmar 0.74 → 0.66 — slight tail-risk regression, clear Sharpe win). All 4 insider features earn non-zero importance. Saved as `models/xgb_v1.json`.
 - [x] make today.py read from features.parquet instead of panel.parquet — `panel.parquet` drops the most recent ~21 trading days because forward returns aren't yet realised, but those are exactly the rows today.py needs to score live. New `load_features()` helper in `scripts/features.py`.
-- [ ] system: ensemble of 5 boosters with different seeds — average predictions (free, ~½ day, +5–15% Sharpe)
+- [x] system: seed ensemble — **done in ranker v2** (3 LightGBM seeds, rank-averaged). 5 seeds were identical to 1 in walk-forward; LambdaRank with bagging is already low-variance.
 - [ ] feature: 13F institutional ownership from SEC EDGAR (~1-2 days) — quarterly Schedule 13F filings via EDGAR bulk data, same shape as insider pipeline. Candidate features: top-N largest holder count, ownership concentration (HHI on holdings), net fund buying in last quarter. Smart-money flow signal.
 - [ ] feature: FRED macro broadcast (~½ day) — `T10Y3M` (10y/3m term spread, 1982+) and `BAMLH0A0HYM2` (HY OAS, 1996+) via free FRED API. Both have full 2007 floor coverage. Broadcast regime context that interacts with cross-section, same shape as `vix_level` / `spy_rsi_14`. See [§9](#9-fred-macro-broadcast-features-free--day).
 - [ ] feature: extended recession-probability suite (~1 day) — broadcast regime block beyond §9, designed to interact with cross-section under stress. All free; all earliest dates predate the 2007 train floor.
@@ -1987,17 +2188,19 @@ better spent on the ranking objective.
         - NY Fed Staff Nowcast — `newyorkfed.org/research/policy/nowcast` (similar real-time GDP nowcast).
     - **Reference only — never a feature**: `USREC` (NBER official recession indicator, retrospective binary). Use for attribution / per-regime backtest slicing only; using it as a feature is a look-ahead violation since NBER dates recessions in arrears.
     - **Watch for redundancy.** `RECPROUSM156N` is itself derived from the yield curve, so its signal partially overlaps `T10Y3M`. Hope is that stress measures from different domains (rates → labor → leading composites) capture distinct cross-section interactions; prune via stability sweep after wiring.
-- [ ] feature: Amihud illiquidity (free, ~1 hour) — rolling 21d mean of `|daily_return| / dollar_volume`, plus cross-sectional rank. Computed from existing OHLCV; full 2007+ coverage. Documented illiquidity premium (Amihud 2002). See [§10](#10-amihud-illiquidity-free-1-hour).
+- [x] feature: Amihud illiquidity — **shipped in Bucket 9** (ranker v2). Original note: (free, ~1 hour) — rolling 21d mean of `|daily_return| / dollar_volume`, plus cross-sectional rank. Computed from existing OHLCV; full 2007+ coverage. Documented illiquidity premium (Amihud 2002). See [§10](#10-amihud-illiquidity-free-1-hour).
 - [ ] feature: quality factors — gross profitability (Novy-Marx 2013), accruals (Sloan 1996), asset growth (Cooper 2008) (~½ day) via existing XBRL pipeline. New XBRL tags needed: COGS, depreciation, 4Q-lagged assets. Same NaN profile as existing fundamentals. See [§11](#11-quality-factors--gross-profitability-accruals-asset-growth-free--day).
-- [ ] re-run null test on the clean-architecture model (current null-test table is stale)
+- [x] re-run null test — **done 2026-10** (Ranker v2 section): random 40 names 14.0% DEV / 12.6% HOLDOUT; the model-free 40-highest-vol screen ≈ both models.
+- [x] 🔴 fix label bridging across index exits/re-entries (`labels.panel_forward_return`, 2026-10) — 336 rows had multi-year "21-day" returns
+- [ ] ranker v2: within-volatility skill is thin (rank IC t 0.4–2.2 by vol quintile). The next real lift needs a signal source orthogonal to vol (13F, short interest with history, estimate revisions) — or paid delisted data to learn whether the vol tilt survives at all
 - [ ] data: swap yfinance → Sharadar (or equivalent) for delisted-ticker coverage — do before going live
 - [ ] follow-up stability-selection prune now that 4 new features have landed — `excess_ret_5d`, `atr_pct`, `earnings_yield`, `roa_rank` were dead in this single run, but a 5-seed sweep is needed before pruning
 - [x] 🔴 **daily de-risk check** — **shipped 2026-07-13** as a default step of `today.py` (so `run_all.py` gets it for free). Recomputes `min(--leverage, --vol-target / spy_vol_20d)` from the freshest cached SPY data and compares it against the live book's gross exposure, printing "OK — hold" or "⚠⚠ DE-RISK … SELL DOWN TODAY" with the exact `execute_picks.py` command. Book exposure comes from `reports/live_book.json`, which `execute_picks.py --mode live` now writes after placing orders (seeded retroactively for the 2026-07-06 go-live: gross 1.07x); falls back to the full leverage cap (worst case — can only over-fire, never lull) if the file is missing, or `--book-exposure` to override. Sell-down only by design: when the formula rises back above the book, re-levering waits for the quarterly rebalance. Alarm threshold: formula < book × 0.90 (`--derisk-tolerance`). `--no-derisk` skips.
-- [ ] model: learning-to-rank objective (`rank:pairwise` / `rank:ndcg`, date as group key) — direct match to top-40 selection; keep the top-40 mean-return eval metric so the objective is the only variable. See [§12](#12-model-architecture-experiments--same-panel-new-objectives-free-1-day-each).
-- [ ] model: classification reframing — binary logistic on `P(top decile of forward 21d return)`; robust to fat-tailed labels, probability doubles as a sizing weight. See [§12](#12-model-architecture-experiments--same-panel-new-objectives-free-1-day-each).
-- [ ] labels: multi-horizon blend — add 5d + 63d forward labels, train 3 boosters, blend per-date ranks. See [§12](#12-model-architecture-experiments--same-panel-new-objectives-free-1-day-each).
+- [x] model: learning-to-rank objective — **shipped as ranker v2** (LightGBM `lambdarank`, date groups, decile grades, truncation 50; XGBoost `rank:pairwise` not needed). Original note: (`rank:pairwise` / `rank:ndcg`, date as group key) — direct match to top-40 selection; keep the top-40 mean-return eval metric so the objective is the only variable. See [§12](#12-model-architecture-experiments--same-panel-new-objectives-free-1-day-each).
+- [x] model: classification reframing — **tested 2026-10**: XGB binary top-decile 21.2% DEV vs regression 18.1%, but below LambdaRank 22.1%; not adopted. Original note: binary logistic on `P(top decile of forward 21d return)`; robust to fat-tailed labels, probability doubles as a sizing weight. See [§12](#12-model-architecture-experiments--same-panel-new-objectives-free-1-day-each).
+- [~] labels: multi-horizon — **63d label tested 2026-10, worse** for both XGB and LambdaRank on DEV; 5d not tried. Original note: add 5d + 63d forward labels, train 3 boosters, blend per-date ranks. See [§12](#12-model-architecture-experiments--same-panel-new-objectives-free-1-day-each).
 - [ ] model: meta-labeling — second model predicts P(pick beats SPY) for sizing, trained on out-of-fold primary predictions. See [§12](#12-model-architecture-experiments--same-panel-new-objectives-free-1-day-each).
-- [ ] system: cross-model ensemble (XGBoost + LightGBM + ridge-on-ranks, per-date rank average) — after the 5-seed ensemble (§5) lands. See [§12](#12-model-architecture-experiments--same-panel-new-objectives-free-1-day-each).
+- [~] system: cross-model ensemble — **tested 2026-10**: v2 + XGB walk-forward blends were worse on DEV; not adopted. Original note: (XGBoost + LightGBM + ridge-on-ranks, per-date rank average) — after the 5-seed ensemble (§5) lands. See [§12](#12-model-architecture-experiments--same-panel-new-objectives-free-1-day-each).
 - [ ] cross-project: point-in-time backtest of the `conviction-pick-sp500` deterministic funnel against this repo's panel (membership history + OHLCV + XBRL fundamentals) — validates that doctrine's quality gates historically; see that repo's README roadmap.
 - [ ] 🔴 **train.py: replace optuna objective (val decile spread) with a top-40-aligned metric** — empirical anti-correlation observed during the 8-K work (May 2026): a 350-trial sweep maximised val decile spread to 0.0183 but backtested at +18.81% raw CAGR, while `--quick` with saved DEFAULT_PARAMS (val decile spread 0.0161) backtested at +21.60%. Decile spread averages ranking across deciles 1 & 10 (~50 names each) but the strategy holds only the top 40 — the very tip of decile 1. Replace `_compute_decile_spread()` with cumulative log return (or Sharpe) of an equal-weighted top-40 portfolio over val. Until this lands, **do not run `train.py --trials N`** — the saved DEFAULT_PARAMS are the current best model. Also lower `reg_lambda` floor from 0.001 (already done) — no other range changes pending.
 

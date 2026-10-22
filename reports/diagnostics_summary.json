@@ -1,51 +1,51 @@
 {
-  "generated": "2026-09-01 01:11:48.303075",
+  "generated": "2026-10-22 14:37:56.276113",
   "top_n": 40,
   "ic": {
-    "daily_ic_mean": 0.017002220407527694,
-    "monthly_ic_mean": 0.01789868571949667,
-    "monthly_ic_tstat": 1.1414084493693823,
-    "pct_months_positive": 0.5671641791044776,
-    "n_months": 67,
+    "daily_ic_mean": 0.017193995867444165,
+    "monthly_ic_mean": 0.01817756104169392,
+    "monthly_ic_tstat": 1.278916024426844,
+    "pct_months_positive": 0.5797101449275363,
+    "n_months": 69,
     "best_month": {
-      "month": "2025-04",
-      "ic": 0.31294633320813936
+      "month": "2021-01",
+      "ic": 0.3114203474476867
     },
     "worst_month": {
-      "month": "2025-03",
-      "ic": -0.28497578745058183
+      "month": "2023-09",
+      "ic": -0.1760938212350261
     },
-    "monthly_ic_mean_excl_top3": 0.005785825059012076
+    "monthly_ic_mean_excl_top3": 0.006344767869462085
   },
   "underwater": {
     "raw_long_only": {
-      "max_dd": -0.26993091100412725,
-      "current_dd": -0.08540872335036409
+      "max_dd": -0.3136448210555475,
+      "current_dd": 0.0
     },
     "gated_long_only": {
-      "max_dd": -0.2536536560354278,
-      "current_dd": -0.08487889053274822
+      "max_dd": -0.2904221429813987,
+      "current_dd": 0.0
     },
     "spy": {
-      "max_dd": -0.24496403026291746,
-      "current_dd": -0.013922477788171572
+      "max_dd": -0.2449639566009052,
+      "current_dd": -0.007701292268131321
     }
   },
   "concentration": {
-    "n_rebalances": 67,
-    "unique_tickers": 298,
-    "avg_consecutive_overlap": 0.5583333333333333,
+    "n_rebalances": 69,
+    "unique_tickers": 249,
+    "avg_consecutive_overlap": 0.6191176470588237,
     "top_sector": "Information Technology",
-    "top_sector_avg_weight": 0.3026119402985075
+    "top_sector_avg_weight": 0.32934782608695656
   },
   "hit_rate": {
-    "avg_hit_rate": 0.5167910447761193,
-    "pct_rebalances_beat_spy": 0.5671641791044776,
-    "n_rebalances": 67
+    "avg_hit_rate": 0.5126811594202898,
+    "pct_rebalances_beat_spy": 0.5797101449275363,
+    "n_rebalances": 69
   },
   "live": {
-    "n_windows": 16,
-    "n_matured": 14,
-    "avg_active_ret_matured": 0.0036113213824851137
+    "n_windows": 17,
+    "n_matured": 16,
+    "avg_active_ret_matured": 0.007107162446035124
   }
 }

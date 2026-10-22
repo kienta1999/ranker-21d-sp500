@@ -1,0 +1,11 @@
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+Loaded 2,051,864 rows; dropped 318,969 early-window NaN → 1,732,895 usable rows.
+Trimmed 28,464 pre-2007-01-01 buffer rows → 1,704,431 model-ready rows.
+{'model': 'v2', 'n': 40, 'hold': 21, 'lev': '+1.000', 'var': 'raw', 'dev_cagr': '+0.205', 'dev_sh': '+0.749', 'dev_dd': '-0.491', 'hold_cagr': '+0.405', 'hold_sh': '+1.653', 'hold_dd': '-0.253', '2021+_cagr': '+0.295', '2021+_sh': '+1.083', '2021+_dd': '-0.305'}
+
+end 2026-09-22  sector_cap=0.4 vol_target=0.2
+model  n  hold  lev var dev_cagr dev_sh dev_dd hold_cagr hold_sh hold_dd 2021+_cagr 2021+_sh 2021+_dd
+   v2 40    21  1.0 raw   +20.5%   0.75 -49.1%    +40.5%    1.65  -25.3%     +29.5%     1.08   -30.5%
+  SPY  0     0  1.0   -   +12.6%   0.74 -33.7%    +22.7%    1.51  -18.8%     +15.4%     0.93   -24.5%
+DECOMP_DONE

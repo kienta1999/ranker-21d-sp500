@@ -73,7 +73,8 @@ from data import load_market  # noqa: E402
 from dataset import TEST_END, TEST_START, load_panel  # noqa: E402
 
 _ROOT = os.path.dirname(_HERE)
-MODEL_PATH = os.path.join(_ROOT, "models", "xgb_v1.json")
+MODEL_PATH = os.path.join(_ROOT, "models", "ranker_v2")
+LEGACY_MODEL_PATH = os.path.join(_ROOT, "models", "xgb_v1.json")
 REPORTS_DIR = os.path.join(_ROOT, "reports")
 
 PERIODS_PER_YEAR = 252
@@ -84,17 +85,36 @@ PERIODS_PER_YEAR = 252
 # ─────────────────────────────────────────────────────────────────────────────
 
 
-def predict_test(panel: pd.DataFrame, model_path: str) -> pd.DataFrame:
-    """Score the test slice with the saved xgb_v1 model.
+def predict_test(panel: pd.DataFrame, model_path: str, start: str | None = None) -> pd.DataFrame:
+    """Score the test slice.
 
-    Honors both TEST_START and TEST_END so a leave-2008-out config
-    (test = 2007-01 → 2009-12) doesn't accidentally pull train rows
-    (2010+) into the backtest. `TEST_END = None` runs through the
-    latest panel date (production behavior).
+    v2 (`model_path` is a directory): the live model is trained on every
+    realised label, so scoring history with it would be in-sample. Instead
+    read the annual walk-forward OOS scores (`ranker_v2.py walkforward`),
+    where each year was predicted by a model trained only on data realised
+    before that January. Available from 2012.
+
+    v1 (.json): score with the frozen 2007-2017 booster. Honors both
+    TEST_START and TEST_END so a leave-2008-out config (test = 2007-01 →
+    2009-12) doesn't accidentally pull train rows (2010+) into the
+    backtest. `TEST_END = None` runs through the latest panel date.
     """
-    test = panel[panel["date"] >= TEST_START]
+    test = panel[panel["date"] >= (start or TEST_START)]
     if TEST_END is not None:
         test = test[test["date"] <= TEST_END]
+    if os.path.isdir(model_path):
+        from ranker_v2 import OOS_PATH
+
+        if not os.path.exists(OOS_PATH):
+            raise SystemExit(f"{OOS_PATH} not found — run `scripts/ranker_v2.py walkforward` first.")
+        oos = pd.read_parquet(OOS_PATH)
+        oos["date"] = pd.to_datetime(oos["date"])
+        test = test.merge(oos, on=["date", "ticker"], how="inner")
+        missing = panel.loc[panel["date"] >= (start or TEST_START), "date"].max() > test["date"].max()
+        if missing:
+            print(f"  ⚠ walk-forward scores end {test['date'].max().date()} — rerun "
+                  f"`ranker_v2.py walkforward` to extend")
+        return test
     return strategy.predict(test, strategy.load_model(model_path))
 
 
@@ -120,6 +140,7 @@ def run_one_offset(
     margin_rate: float,
     lag: int = 0,
     sector_cap: float | None = None,
+    drift: bool = False,
 ) -> tuple[pd.Series, pd.Series, pd.Series, pd.Series]:
     """Single backtest with rebalances on day `offset`, `offset+hold_days`, ....
 
@@ -140,6 +161,14 @@ def run_one_offset(
     When gross exposure exceeds 1.0 (leverage), the borrowed fraction accrues
     margin interest every held day at `margin_rate` / 252, so the equity curve
     nets out the financing cost of leverage.
+
+    `drift=False` (the historical default) holds the target weights fixed
+    between rebalances — i.e. it silently rebalances back to equal weight
+    every day at no cost. `drift=True` lets weights move with prices
+    (buy-and-hold, what a book traded only on rebalance days actually
+    does); turnover at the next rebalance is then measured against the
+    drifted weights. On a basket of very volatile names the two differ by
+    several CAGR points — see README "Ranker v2".
     """
     weights: dict[str, float] = {}
     equity = 1.0
@@ -156,6 +185,11 @@ def run_one_offset(
             ret_map = dict(zip(day["ticker"], day["ret_1d"]))
             pf_ret = sum(w * ret_map.get(t, 0.0) for t, w in weights.items())
             equity *= 1.0 + pf_ret
+            if drift and pf_ret > -1.0:
+                # Buy-and-hold between rebalances: each position's share of
+                # equity moves with its own return (the cash bucket earns 0).
+                weights = {t: w * (1.0 + ret_map.get(t, 0.0)) / (1.0 + pf_ret)
+                           for t, w in weights.items()}
 
         # 1b. Charge margin interest on any borrowed fraction (gross > 1.0).
         # Weights are fixed between rebalances, so their sum == the gross
@@ -225,6 +259,7 @@ def run_shifted_starts(
     margin_rate: float,
     lag: int = 0,
     sector_cap: float | None = None,
+    drift: bool = False,
 ) -> tuple[pd.DataFrame, pd.Series, pd.Series, pd.Series]:
     """Run `hold_days` backtests at different rebalance offsets.
 
@@ -260,7 +295,7 @@ def run_shifted_starts(
             cost_per_side=cost_per_side, vol_target=vol_target,
             weight_mode=weight_mode,
             quality_filter_on=quality_filter_on,
-            leverage=leverage, margin_rate=margin_rate, lag=lag,
+            leverage=leverage, margin_rate=margin_rate, lag=lag, drift=drift,
         )
         curves[offset] = eq
         tim[offset] = float(inm.mean())
@@ -436,7 +471,22 @@ def main() -> None:
             "prediction ranking, skipping sectors already at the cap."
         ),
     )
-    ap.add_argument("--model", default=MODEL_PATH)
+    ap.add_argument(
+        "--drift", action="store_true",
+        help=(
+            "Let weights drift with prices between rebalances (buy-and-hold, "
+            "what the live book does). Default off = fixed target weights, "
+            "i.e. a free daily rebalance — the convention every number "
+            "published before 2026-10 used. Measured 2012-2026 on top-40: "
+            "≤1 CAGR pt difference."
+        ),
+    )
+    ap.add_argument("--model", default=MODEL_PATH,
+                    help="models/ranker_v2 (default, walk-forward OOS scores) or "
+                         "models/xgb_v1.json (legacy frozen booster).")
+    ap.add_argument("--start", default=None,
+                    help=f"Backtest start date (default TEST_START={TEST_START}). "
+                         "v2 walk-forward scores exist from 2012-01-01.")
     args = ap.parse_args()
 
     cost_per_side = args.cost_bps / 1e4
@@ -444,7 +494,7 @@ def main() -> None:
 
     print("Loading panel and predicting on test set...")
     panel = load_panel()
-    test_panel = predict_test(panel, args.model)
+    test_panel = predict_test(panel, args.model, args.start)
     print(f"  test rows: {len(test_panel):,}  "
           f"({test_panel['date'].min().date()} → {test_panel['date'].max().date()})")
 
@@ -469,7 +519,7 @@ def main() -> None:
             weight_mode=args.weight,
             quality_filter_on=quality_filter_on,
             leverage=args.leverage, margin_rate=args.margin_rate, lag=args.lag,
-            sector_cap=args.sector_cap,
+            sector_cap=args.sector_cap, drift=args.drift,
         )
 
     print(f"Running long-only RAW / no overlay ({args.hold_days} offsets, "
@@ -481,7 +531,7 @@ def main() -> None:
         weight_mode=args.weight,
         quality_filter_on=quality_filter_on,
         leverage=args.leverage, margin_rate=args.margin_rate, lag=args.lag,
-        sector_cap=args.sector_cap,
+        sector_cap=args.sector_cap, drift=args.drift,
     )
 
     test_start = pd.Timestamp(test_panel["date"].min())
@@ -526,6 +576,9 @@ def main() -> None:
         "leverage": args.leverage,
         "margin_rate": args.margin_rate,
         "lag": args.lag,
+        "drift": args.drift,
+        "model": os.path.relpath(args.model, _ROOT),
+        "start": str(test_panel["date"].min().date()),
     }
 
     os.makedirs(REPORTS_DIR, exist_ok=True)

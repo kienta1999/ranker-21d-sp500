@@ -22,3 +22,6 @@ data/insider/
 reports/web_account.json
 reports/web_orders.json
 .playwright-mcp/
+
+# Walk-forward research prediction cache (regeneratable, ~GBs)
+research/cache/

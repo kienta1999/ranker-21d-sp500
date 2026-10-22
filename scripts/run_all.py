@@ -8,7 +8,7 @@ sp500_history.parquet aligned with the live roster. ~1s extra per run.
 
 Modes:
     (default)         universe → data → earnings/insider/fundamentals/macro → features → labels → today
-    --retrain         (default) + train + backtest
+    --retrain         (default) + ranker v2 train + walk-forward + backtest
     --full            alias for --retrain (retained for back-compat)
     --download-only   universe → data → earnings → insider → fundamentals → macro (refresh caches only)
 
@@ -168,7 +168,13 @@ def main() -> int:
     steps.append(("Rebuild label panel", py + ["scripts/labels.py"]))
 
     if args.retrain:
-        steps.append(("Train + tune model (~10–30 min)", py + ["scripts/train.py"]))
+        # Ranker v2: refit the live ensemble on every realised label, then
+        # refresh the annual walk-forward OOS scores the backtest reads.
+        # (Legacy v1: `scripts/train.py`, unchanged, writes models/xgb_v1.json.)
+        steps.append(("Train ranker v2 on all realised labels (~5 min)",
+                      py + ["scripts/ranker_v2.py", "train"]))
+        steps.append(("Walk-forward ranker v2 OOS scores (~20 min)",
+                      py + ["scripts/ranker_v2.py", "walkforward"]))
         steps.append(("Backtest", py + ["scripts/backtest.py"]))
 
     if not args.no_today:

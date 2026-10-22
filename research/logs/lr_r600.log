@@ -1,0 +1,22 @@
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+[lr_r600] 50 features, label=y_relevance, model=lgb params={'objective': 'lambdarank', 'learning_rate': 0.02, 'num_leaves': 31, 'min_data_in_leaf': 2000, 'feature_fraction': 0.6, 'bagging_fraction': 0.7, 'bagging_freq': 1, 'lambda_l2': 1.0, 'lambdarank_truncation_level': 50} seeds=(15,) stride=3
+    fold 2012: train 105,087 rows ≤2011-11-30  test 70,612  (13.6s)
+    fold 2013: train 128,732 rows ≤2012-11-29  test 73,479  (16.1s)
+    fold 2014: train 153,199 rows ≤2013-11-29  test 75,265  (17.7s)
+    fold 2015: train 178,221 rows ≤2014-12-01  test 77,788  (20.8s)
+    fold 2016: train 204,074 rows ≤2015-12-01  test 82,322  (22.5s)
+    fold 2017: train 231,376 rows ≤2016-11-30  test 86,807  (26.8s)
+    fold 2018: train 259,956 rows ≤2017-11-29  test 89,979  (29.3s)
+    fold 2019: train 289,982 rows ≤2018-11-28  test 93,395  (32.3s)
+    fold 2020: train 320,993 rows ≤2019-11-29  test 99,470  (35.6s)
+    fold 2021: train 353,902 rows ≤2020-12-01  test 102,436  (38.0s)
+    fold 2022: train 387,959 rows ≤2021-12-01  test 105,086  (40.4s)
+    fold 2023: train 423,003 rows ≤2022-11-30  test 108,972  (45.9s)
+    fold 2024: train 459,071 rows ≤2023-11-29  test 113,728  (47.1s)
+    fold 2025: train 496,860 rows ≤2024-11-29  test 117,093  (50.4s)
+    fold 2026: train 536,076 rows ≤2025-12-01  test 96,952  (52.1s)
+      variant    cagr sharpe   maxdd     vol cagr_min cagr_max       ic  ic_t
+dev   lr_r600  +26.1%   1.00  -36.9%  +26.3%   +23.4%   +28.8%  +0.0201  1.97
+hold  lr_r600  +31.5%   1.48  -17.2%  +21.4%   +26.7%   +36.2%  +0.0148  1.22
+[lr_r600] done in 528s

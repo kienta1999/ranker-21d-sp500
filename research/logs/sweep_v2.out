@@ -1,0 +1,32 @@
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+Loaded 2,051,864 rows; dropped 318,969 early-window NaN → 1,732,895 usable rows.
+Trimmed 28,464 pre-2007-01-01 buffer rows → 1,704,431 model-ready rows.
+{'model': 'v2', 'n': 20, 'hold': 21, 'lev': '+1.000', 'var': 'voltgt', 'dev_cagr': '+0.207', 'dev_sh': '+0.796', 'dev_dd': '-0.453', 'hold_cagr': '+0.437', 'hold_sh': '+1.661', 'hold_dd': '-0.266', '2021+_cagr': '+0.322', '2021+_sh': '+1.147', '2021+_dd': '-0.314'}
+{'model': 'v2', 'n': 20, 'hold': 21, 'lev': '+1.350', 'var': 'voltgt', 'dev_cagr': '+0.228', 'dev_sh': '+0.734', 'dev_dd': '-0.524', 'hold_cagr': '+0.537', 'hold_sh': '+1.608', 'hold_dd': '-0.309', '2021+_cagr': '+0.403', '2021+_sh': '+1.175', '2021+_dd': '-0.352'}
+{'model': 'v2', 'n': 20, 'hold': 63, 'lev': '+1.000', 'var': 'voltgt', 'dev_cagr': '+0.193', 'dev_sh': '+0.750', 'dev_dd': '-0.465', 'hold_cagr': '+0.442', 'hold_sh': '+1.740', 'hold_dd': '-0.278', '2021+_cagr': '+0.324', '2021+_sh': '+1.186', '2021+_dd': '-0.286'}
+{'model': 'v2', 'n': 20, 'hold': 63, 'lev': '+1.350', 'var': 'voltgt', 'dev_cagr': '+0.208', 'dev_sh': '+0.657', 'dev_dd': '-0.570', 'hold_cagr': '+0.532', 'hold_sh': '+1.630', 'hold_dd': '-0.345', '2021+_cagr': '+0.395', '2021+_sh': '+1.174', '2021+_dd': '-0.345'}
+{'model': 'v2', 'n': 30, 'hold': 21, 'lev': '+1.000', 'var': 'voltgt', 'dev_cagr': '+0.190', 'dev_sh': '+0.778', 'dev_dd': '-0.432', 'hold_cagr': '+0.405', 'hold_sh': '+1.638', 'hold_dd': '-0.253', '2021+_cagr': '+0.299', '2021+_sh': '+1.133', '2021+_dd': '-0.296'}
+{'model': 'v2', 'n': 30, 'hold': 21, 'lev': '+1.350', 'var': 'voltgt', 'dev_cagr': '+0.209', 'dev_sh': '+0.718', 'dev_dd': '-0.500', 'hold_cagr': '+0.492', 'hold_sh': '+1.571', 'hold_dd': '-0.295', '2021+_cagr': '+0.371', '2021+_sh': '+1.153', '2021+_dd': '-0.330'}
+{'model': 'v2', 'n': 30, 'hold': 63, 'lev': '+1.000', 'var': 'voltgt', 'dev_cagr': '+0.185', 'dev_sh': '+0.758', 'dev_dd': '-0.454', 'hold_cagr': '+0.422', 'hold_sh': '+1.747', 'hold_dd': '-0.263', '2021+_cagr': '+0.314', '2021+_sh': '+1.211', '2021+_dd': '-0.282'}
+{'model': 'v2', 'n': 30, 'hold': 63, 'lev': '+1.350', 'var': 'voltgt', 'dev_cagr': '+0.200', 'dev_sh': '+0.667', 'dev_dd': '-0.558', 'hold_cagr': '+0.513', 'hold_sh': '+1.653', 'hold_dd': '-0.329', '2021+_cagr': '+0.385', '2021+_sh': '+1.213', '2021+_dd': '-0.329'}
+{'model': 'v2', 'n': 40, 'hold': 21, 'lev': '+1.000', 'var': 'voltgt', 'dev_cagr': '+0.180', 'dev_sh': '+0.771', 'dev_dd': '-0.422', 'hold_cagr': '+0.369', 'hold_sh': '+1.555', 'hold_dd': '-0.249', '2021+_cagr': '+0.274', '2021+_sh': '+1.083', '2021+_dd': '-0.283'}
+{'model': 'v2', 'n': 40, 'hold': 21, 'lev': '+1.350', 'var': 'voltgt', 'dev_cagr': '+0.196', 'dev_sh': '+0.706', 'dev_dd': '-0.490', 'hold_cagr': '+0.443', 'hold_sh': '+1.479', 'hold_dd': '-0.291', '2021+_cagr': '+0.335', '2021+_sh': '+1.092', '2021+_dd': '-0.314'}
+{'model': 'v2', 'n': 40, 'hold': 63, 'lev': '+1.000', 'var': 'voltgt', 'dev_cagr': '+0.178', 'dev_sh': '+0.762', 'dev_dd': '-0.438', 'hold_cagr': '+0.390', 'hold_sh': '+1.677', 'hold_dd': '-0.256', '2021+_cagr': '+0.293', '2021+_sh': '+1.176', '2021+_dd': '-0.276'}
+{'model': 'v2', 'n': 40, 'hold': 63, 'lev': '+1.350', 'var': 'voltgt', 'dev_cagr': '+0.192', 'dev_sh': '+0.669', 'dev_dd': '-0.541', 'hold_cagr': '+0.472', 'hold_sh': '+1.584', 'hold_dd': '-0.319', '2021+_cagr': '+0.358', '2021+_sh': '+1.174', '2021+_dd': '-0.319'}
+
+end 2026-09-22  sector_cap=0.4 vol_target=0.2
+model  n  hold  lev    var dev_cagr dev_sh dev_dd hold_cagr hold_sh hold_dd 2021+_cagr 2021+_sh 2021+_dd
+   v2 20    21 1.00 voltgt   +20.7%   0.80 -45.3%    +43.7%    1.66  -26.6%     +32.2%     1.15   -31.4%
+   v2 20    21 1.35 voltgt   +22.8%   0.73 -52.4%    +53.7%    1.61  -30.9%     +40.3%     1.18   -35.2%
+   v2 20    63 1.00 voltgt   +19.3%   0.75 -46.5%    +44.2%    1.74  -27.8%     +32.4%     1.19   -28.6%
+   v2 20    63 1.35 voltgt   +20.8%   0.66 -57.0%    +53.2%    1.63  -34.5%     +39.5%     1.17   -34.5%
+   v2 30    21 1.00 voltgt   +19.0%   0.78 -43.2%    +40.5%    1.64  -25.3%     +29.9%     1.13   -29.6%
+   v2 30    21 1.35 voltgt   +20.9%   0.72 -50.0%    +49.2%    1.57  -29.5%     +37.1%     1.15   -33.0%
+   v2 30    63 1.00 voltgt   +18.5%   0.76 -45.4%    +42.2%    1.75  -26.3%     +31.4%     1.21   -28.2%
+   v2 30    63 1.35 voltgt   +20.0%   0.67 -55.8%    +51.3%    1.65  -32.9%     +38.5%     1.21   -32.9%
+   v2 40    21 1.00 voltgt   +18.0%   0.77 -42.2%    +36.9%    1.56  -24.9%     +27.4%     1.08   -28.3%
+   v2 40    21 1.35 voltgt   +19.6%   0.71 -49.0%    +44.3%    1.48  -29.1%     +33.5%     1.09   -31.4%
+   v2 40    63 1.00 voltgt   +17.8%   0.76 -43.8%    +39.0%    1.68  -25.6%     +29.3%     1.18   -27.6%
+   v2 40    63 1.35 voltgt   +19.2%   0.67 -54.1%    +47.2%    1.58  -31.9%     +35.8%     1.17   -31.9%
+  SPY  0     0 1.00      -   +12.6%   0.74 -33.7%    +22.7%    1.51  -18.8%     +15.4%     0.93   -24.5%

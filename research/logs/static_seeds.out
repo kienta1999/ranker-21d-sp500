@@ -1,0 +1,8 @@
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+seed 1: best_iteration=12
+seed 2: best_iteration=90
+seed 3: best_iteration=55
+seed 4: best_iteration=30
+seed 5: best_iteration=97
+seed 15: best_iteration=36

@@ -104,19 +104,31 @@ DEFAULT_SEED = 15
 # ─────────────────────────────────────────────────────────────────────────────
 
 
-def load_model(path: str) -> xgb.XGBRegressor:
-    """Load the saved xgb_v1 booster with categorical support enabled."""
+def load_model(path: str):
+    """Load a ranker: a directory is the v2 LightGBM LambdaRank ensemble
+    (scripts/ranker_v2.py), a .json file the legacy xgb_v1 booster."""
+    if os.path.isdir(path):
+        from ranker_v2 import RankerV2
+
+        return RankerV2.load(path)
     booster = xgb.XGBRegressor(enable_categorical=True)
     booster.load_model(path)
     return booster
 
 
-def predict(df: pd.DataFrame, booster: xgb.XGBRegressor) -> pd.DataFrame:
-    """Score rows in `df` using the booster. Returns a copy with a new
-    ``predicted_return`` column.
+def predict(df: pd.DataFrame, booster) -> pd.DataFrame:
+    """Score rows in `df` using the model. Returns a copy with a new
+    ``predicted_return`` column. For v2 it is a per-date percentile score
+    in (0, 1] rather than a return — only its ordering is used, except by
+    --weight pred, where it acts as a positive weight.
     """
+    from ranker_v2 import RankerV2
+
     out = df.copy()
-    out["predicted_return"] = booster.predict(out[FEATURE_COLS])
+    if isinstance(booster, RankerV2):
+        out["predicted_return"] = booster.score(out)
+    else:
+        out["predicted_return"] = booster.predict(out[FEATURE_COLS])
     return out
 
 

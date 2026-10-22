@@ -1,0 +1,12 @@
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+warning: The `UV_NATIVE_TLS` environment variable is deprecated and will be removed in a future release. Use `UV_SYSTEM_CERTS` instead.
+Loaded 2,051,864 rows; dropped 318,969 early-window NaN → 1,732,895 usable rows.
+Trimmed 28,464 pre-2007-01-01 buffer rows → 1,704,431 model-ready rows.
+{'model': 'v2', 'n': 40, 'hold': 21, 'lev': '+1.000', 'var': 'raw', 'dev_cagr': '+0.205', 'dev_sh': '+0.750', 'dev_dd': '-0.491', 'hold_cagr': '+0.415', 'hold_sh': '+1.655', 'hold_dd': '-0.259', '2021+_cagr': '+0.301', '2021+_sh': '+1.090', '2021+_dd': '-0.305'}
+{'model': 'v2', 'n': 40, 'hold': 21, 'lev': '+1.000', 'var': 'voltgt', 'dev_cagr': '+0.181', 'dev_sh': '+0.773', 'dev_dd': '-0.422', 'hold_cagr': '+0.376', 'hold_sh': '+1.553', 'hold_dd': '-0.255', '2021+_cagr': '+0.279', '2021+_sh': '+1.087', '2021+_dd': '-0.282'}
+
+end 2026-09-22  sector_cap=None vol_target=0.2
+model  n  hold  lev    var dev_cagr dev_sh dev_dd hold_cagr hold_sh hold_dd 2021+_cagr 2021+_sh 2021+_dd
+   v2 40    21  1.0    raw   +20.5%   0.75 -49.1%    +41.5%    1.66  -25.9%     +30.1%     1.09   -30.5%
+   v2 40    21  1.0 voltgt   +18.1%   0.77 -42.2%    +37.6%    1.55  -25.5%     +27.9%     1.09   -28.2%
+  SPY  0     0  1.0      -   +12.6%   0.74 -33.7%    +22.7%    1.51  -18.8%     +15.4%     0.93   -24.5%
