@@ -1,0 +1,918 @@
+{
+  "submitted": [
+    {
+      "ticker": "ACN",
+      "action": "SELL",
+      "qty": 7,
+      "limit": 198.4,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496518",
+          "local_order_id": "RK10021104ACN",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "action": "SELL",
+      "qty": 3,
+      "limit": 536.08,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496519",
+          "local_order_id": "RK10021104AMAT",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "BLDR",
+      "action": "SELL",
+      "qty": 23,
+      "limit": 56.69,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496520",
+          "local_order_id": "RK10021104BLDR",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "CSGP",
+      "action": "SELL",
+      "qty": 46,
+      "limit": 27.1,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496521",
+          "local_order_id": "RK10021104CSGP",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "DD",
+      "action": "SELL",
+      "qty": 11,
+      "limit": 129.71,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496522",
+          "local_order_id": "RK10021104DD",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "EME",
+      "action": "SELL",
+      "qty": 2,
+      "limit": 788.94,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496523",
+          "local_order_id": "RK10021104EME",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "ETN",
+      "action": "SELL",
+      "qty": 3,
+      "limit": 434.48,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496524",
+          "local_order_id": "RK10021104ETN",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "GEV",
+      "action": "SELL",
+      "qty": 1,
+      "limit": 988.19,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496525",
+          "local_order_id": "RK10021104GEV",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "GNRC",
+      "action": "SELL",
+      "qty": 8,
+      "limit": 214.29,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496526",
+          "local_order_id": "RK10021104GNRC",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "HII",
+      "action": "SELL",
+      "qty": 5,
+      "limit": 268.68,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496527",
+          "local_order_id": "RK10021104HII",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "action": "SELL",
+      "qty": 2,
+      "limit": 119.37,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496528",
+          "local_order_id": "RK10021104INTC",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "ISRG",
+      "action": "SELL",
+      "qty": 4,
+      "limit": 393.38,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496529",
+          "local_order_id": "RK10021104ISRG",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "IT",
+      "action": "SELL",
+      "qty": 7,
+      "limit": 186.11,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496530",
+          "local_order_id": "RK10021104IT",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "LEN",
+      "action": "SELL",
+      "qty": 17,
+      "limit": 79.77,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496531",
+          "local_order_id": "RK10021104LEN",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "LRCX",
+      "action": "SELL",
+      "qty": 5,
+      "limit": 347.04,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496532",
+          "local_order_id": "RK10021104LRCX",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "LULU",
+      "action": "SELL",
+      "qty": 12,
+      "limit": 93.69,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496533",
+          "local_order_id": "RK10021104LULU",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "MCHP",
+      "action": "SELL",
+      "qty": 21,
+      "limit": 81.28,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496534",
+          "local_order_id": "RK10021104MCHP",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "MPWR",
+      "action": "SELL",
+      "qty": 1,
+      "limit": 1420.75,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496535",
+          "local_order_id": "RK10021104MPWR",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "ON",
+      "action": "SELL",
+      "qty": 20,
+      "limit": 82.97,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496536",
+          "local_order_id": "RK10021104ON",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "TER",
+      "action": "SELL",
+      "qty": 4,
+      "limit": 446.4,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496537",
+          "local_order_id": "RK10021104TER",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "TTWO",
+      "action": "SELL",
+      "qty": 6,
+      "limit": 202.12,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496538",
+          "local_order_id": "RK10021104TTWO",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "ZBRA",
+      "action": "SELL",
+      "qty": 4,
+      "limit": 376.25,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496539",
+          "local_order_id": "RK10021104ZBRA",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "APH",
+      "action": "BUY",
+      "qty": 19,
+      "limit": 87.55,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496540",
+          "local_order_id": "RK10021104APH",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "APTV",
+      "action": "BUY",
+      "qty": 6,
+      "limit": 43.73,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496541",
+          "local_order_id": "RK10021104APTV",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "AXON",
+      "action": "BUY",
+      "qty": 2,
+      "limit": 416.91,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496542",
+          "local_order_id": "RK10021104AXON",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "BSX",
+      "action": "BUY",
+      "qty": 9,
+      "limit": 43.21,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496543",
+          "local_order_id": "RK10021104BSX",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "CHTR",
+      "action": "BUY",
+      "qty": 15,
+      "limit": 109.87,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496544",
+          "local_order_id": "RK10021104CHTR",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "COIN",
+      "action": "BUY",
+      "qty": 9,
+      "limit": 183.51,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496545",
+          "local_order_id": "RK10021104COIN",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "action": "BUY",
+      "qty": 6,
+      "limit": 270.24,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496546",
+          "local_order_id": "RK10021104CRWD",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "CTVA",
+      "action": "BUY",
+      "qty": 142,
+      "limit": 12.15,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496547",
+          "local_order_id": "RK10021104CTVA",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "CVNA",
+      "action": "BUY",
+      "qty": 26,
+      "limit": 64.7,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496548",
+          "local_order_id": "RK10021104CVNA",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "DDOG",
+      "action": "BUY",
+      "qty": 6,
+      "limit": 278.76,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496549",
+          "local_order_id": "RK10021104DDOG",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "action": "BUY",
+      "qty": 3,
+      "limit": 568.63,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496550",
+          "local_order_id": "RK10021104DELL",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "EIX",
+      "action": "BUY",
+      "qty": 5,
+      "limit": 53.84,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496551",
+          "local_order_id": "RK10021104EIX",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "FISV",
+      "action": "BUY",
+      "qty": 10,
+      "limit": 44.57,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496552",
+          "local_order_id": "RK10021104FISV",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "GM",
+      "action": "BUY",
+      "qty": 4,
+      "limit": 78.99,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496553",
+          "local_order_id": "RK10021104GM",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "HON",
+      "action": "BUY",
+      "qty": 1,
+      "limit": 215.14,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496554",
+          "local_order_id": "RK10021104HON",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "HOOD",
+      "action": "BUY",
+      "qty": 15,
+      "limit": 114.42,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496555",
+          "local_order_id": "RK10021104HOOD",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "HPE",
+      "action": "BUY",
+      "qty": 24,
+      "limit": 70.13,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496556",
+          "local_order_id": "RK10021104HPE",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "IBM",
+      "action": "BUY",
+      "qty": 1,
+      "limit": 223.32,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496557",
+          "local_order_id": "RK10021104IBM",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "KLAC",
+      "action": "BUY",
+      "qty": 8,
+      "limit": 207.48,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496558",
+          "local_order_id": "RK10021104KLAC",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "action": "BUY",
+      "qty": 1,
+      "limit": 1089.6,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496559",
+          "local_order_id": "RK10021104LITE",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "MNST",
+      "action": "BUY",
+      "qty": 40,
+      "limit": 42.7,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496560",
+          "local_order_id": "RK10021104MNST",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "MRNA",
+      "action": "BUY",
+      "qty": 9,
+      "limit": 190.49,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496561",
+          "local_order_id": "RK10021104MRNA",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "MRVL",
+      "action": "BUY",
+      "qty": 6,
+      "limit": 273.3,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496562",
+          "local_order_id": "RK10021104MRVL",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "NKE",
+      "action": "BUY",
+      "qty": 12,
+      "limit": 33.64,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496563",
+          "local_order_id": "RK10021104NKE",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "action": "BUY",
+      "qty": 2,
+      "limit": 142.19,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496564",
+          "local_order_id": "RK10021104ORCL",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "PNR",
+      "action": "BUY",
+      "qty": 8,
+      "limit": 53.59,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496567",
+          "local_order_id": "RK10021104PNR",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "PODD",
+      "action": "BUY",
+      "qty": 3,
+      "limit": 132.11,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496568",
+          "local_order_id": "RK10021104PODD",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "PSKY",
+      "action": "BUY",
+      "qty": 186,
+      "limit": 9.29,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496569",
+          "local_order_id": "RK10021104PSKY",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "RDDT",
+      "action": "BUY",
+      "qty": 11,
+      "limit": 146.92,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496570",
+          "local_order_id": "RK10021104RDDT",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "RTX",
+      "action": "BUY",
+      "qty": 2,
+      "limit": 185.98,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496571",
+          "local_order_id": "RK10021104RTX",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "TSCO",
+      "action": "BUY",
+      "qty": 54,
+      "limit": 31.51,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496572",
+          "local_order_id": "RK10021104TSCO",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "action": "BUY",
+      "qty": 4,
+      "limit": 373.84,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496573",
+          "local_order_id": "RK10021104TSLA",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "UAL",
+      "action": "BUY",
+      "qty": 1,
+      "limit": 112.64,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496574",
+          "local_order_id": "RK10021104UAL",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "VRT",
+      "action": "BUY",
+      "qty": 6,
+      "limit": 252.06,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496575",
+          "local_order_id": "RK10021104VRT",
+          "order_status": "PreSubmitted",
+          "encrypt_message": "1"
+        }
+      ]
+    },
+    {
+      "ticker": "WDAY",
+      "action": "BUY",
+      "qty": 9,
+      "limit": 187.73,
+      "status": 200,
+      "resp": [
+        {
+          "order_id": "1738496576",
+          "local_order_id": "RK10021104WDAY",
+          "order_status": "Submitted",
+          "encrypt_message": "1"
+        }
+      ]
+    }
+  ],
+  "book": [
+    "BSX BUY 9 @43.21 Filled filled=9",
+    "AXON BUY 2 @416.91 Filled filled=2",
+    "APTV BUY 6 @43.73 Filled filled=6",
+    "APH BUY 19 @87.55 Filled filled=19",
+    "ZBRA SELL 4 @376.25 Filled filled=4",
+    "TTWO SELL 6 @202.12 Filled filled=6",
+    "TER SELL 4 @446.40 Filled filled=4",
+    "ON SELL 20 @82.97 Filled filled=20",
+    "MPWR SELL 1 @1420.75 Filled filled=1",
+    "MCHP SELL 21 @81.28 Filled filled=21",
+    "LULU SELL 12 @93.69 Filled filled=12",
+    "LRCX SELL 5 @347.04 Filled filled=5",
+    "LEN SELL 17 @79.77 Filled filled=17",
+    "IT SELL 7 @186.11 Filled filled=7",
+    "ISRG SELL 4 @393.38 Filled filled=4",
+    "INTC SELL 2 @119.37 Filled filled=2",
+    "HII SELL 5 @268.68 Filled filled=5",
+    "GNRC SELL 8 @214.29 Filled filled=8",
+    "GEV SELL 1 @988.19 Filled filled=1",
+    "ETN SELL 3 @434.48 Filled filled=3",
+    "EME SELL 2 @788.94 Filled filled=2",
+    "DD SELL 11 @129.71 Filled filled=11",
+    "CSGP SELL 46 @27.10 Filled filled=46",
+    "BLDR SELL 23 @56.69 Filled filled=23",
+    "AMAT SELL 3 @536.08 Filled filled=3",
+    "ACN SELL 7 @198.40 Filled filled=7",
+    "VRT BUY 6 @252.06 Filled filled=6",
+    "UAL BUY 1 @112.64 Filled filled=1",
+    "TSLA BUY 4 @373.84 Filled filled=4",
+    "TSCO BUY 54 @31.51 Filled filled=54",
+    "RTX BUY 2 @185.98 Filled filled=2",
+    "RDDT BUY 11 @146.92 Submitted filled=0",
+    "PSKY BUY 186 @9.29 Filled filled=186",
+    "PODD BUY 3 @132.11 Filled filled=3",
+    "PNR BUY 8 @53.59 Filled filled=8",
+    "ORCL BUY 2 @142.19 Filled filled=2",
+    "NKE BUY 12 @33.64 Filled filled=12",
+    "MRVL BUY 6 @273.30 Filled filled=6",
+    "MRNA BUY 9 @190.49 Filled filled=9",
+    "MNST BUY 40 @42.70 Filled filled=40",
+    "LITE BUY 1 @1089.60 Filled filled=1",
+    "KLAC BUY 8 @207.48 Filled filled=8",
+    "IBM BUY 1 @223.32 Filled filled=1",
+    "HPE BUY 24 @70.13 Filled filled=24",
+    "HOOD BUY 15 @114.42 Filled filled=15",
+    "HON BUY 1 @215.14 Filled filled=1",
+    "GM BUY 4 @78.99 Filled filled=4",
+    "FISV BUY 10 @44.57 Filled filled=10",
+    "EIX BUY 5 @53.84 Filled filled=5",
+    "DELL BUY 3 @568.63 Filled filled=3",
+    "DDOG BUY 6 @278.76 Filled filled=6",
+    "CVNA BUY 26 @64.70 Filled filled=26",
+    "CTVA BUY 142 @12.15 Filled filled=142",
+    "CRWD BUY 6 @270.24 Filled filled=6",
+    "COIN BUY 9 @183.51 Filled filled=9",
+    "CHTR BUY 15 @109.87 Filled filled=15",
+    "WDAY BUY 9 @187.73 Filled filled=9"
+  ]
+}
