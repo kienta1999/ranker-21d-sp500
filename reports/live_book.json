@@ -1,10 +1,10 @@
 {
-  "executed_at": "2026-10-02T11:18:03",
+  "executed_at": "2026-11-13T12:38:46",
   "account": "U26645119",
-  "picks": "../picks/picks_2026-10-01.csv",
-  "equity": 51035.69,
-  "leverage": 1.35,
-  "vol_target": 0.2,
-  "gross_exposure": 1.35,
+  "picks": "../picks/picks_2026-11-12.csv",
+  "equity": 45464.77,
+  "leverage": 1.32,
+  "vol_target": 1.0,
+  "gross_exposure": 1.32,
   "venue": "client-portal-web"
 }

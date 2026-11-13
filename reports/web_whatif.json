@@ -1,35 +1,35 @@
 [
   {
-    "ticker": "ACN",
+    "ticker": "BSX",
     "action": "SELL",
     "qty": 7,
-    "limit": 198.4,
+    "limit": 44.06,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,390.69 USD (7 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,390.66 USD"
+        "amount": "309.96 USD (7 Shares)",
+        "commission": "0.01 USD",
+        "total": "309.95 USD"
       },
       "equity": {
-        "current": "50,987",
-        "change": "-1",
-        "after": "50,986"
+        "current": "45,422",
+        "change": "0",
+        "after": "45,422"
       },
       "initial": {
-        "current": "15,118",
-        "change": "-365",
-        "after": "14,753"
+        "current": "16,348",
+        "change": "-81",
+        "after": "16,267"
       },
       "maintenance": {
-        "current": "14,398",
-        "change": "-348",
-        "after": "14,050"
+        "current": "15,600",
+        "change": "-78",
+        "after": "15,522"
       },
       "position": {
-        "current": "7",
+        "current": "40",
         "change": "-7",
-        "after": "0"
+        "after": "33"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -40,315 +40,35 @@
     }
   },
   {
-    "ticker": "AMAT",
+    "ticker": "CHTR",
     "action": "SELL",
-    "qty": 3,
-    "limit": 536.08,
+    "qty": 15,
+    "limit": 137.68,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,617 USD (3 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,616.97 USD"
-      },
-      "equity": {
-        "current": "50,987",
-        "change": "0",
-        "after": "50,986"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "-425",
-        "after": "14,694"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "-404",
-        "after": "13,994"
-      },
-      "position": {
-        "current": "3",
-        "change": "-3",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "BLDR",
-    "action": "SELL",
-    "qty": 23,
-    "limit": 56.69,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,305.25 USD (23 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,305.22 USD"
-      },
-      "equity": {
-        "current": "50,987",
-        "change": "0",
-        "after": "50,987"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "-343",
-        "after": "14,775"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "-327",
-        "after": "14,071"
-      },
-      "position": {
-        "current": "23",
-        "change": "-23",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "CSGP",
-    "action": "SELL",
-    "qty": 46,
-    "limit": 27.1,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,252.12 USD (46 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,252.09 USD"
-      },
-      "equity": {
-        "current": "50,985",
-        "change": "0",
-        "after": "50,985"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "-329",
-        "after": "14,789"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "-313",
-        "after": "14,085"
-      },
-      "position": {
-        "current": "46",
-        "change": "-46",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "DD",
-    "action": "SELL",
-    "qty": 11,
-    "limit": 129.71,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,433.30 USD (11 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,433.27 USD"
-      },
-      "equity": {
-        "current": "50,985",
-        "change": "-1",
-        "after": "50,984"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "-376",
-        "after": "14,741"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "-359",
-        "after": "14,039"
-      },
-      "position": {
-        "current": "11",
-        "change": "-11",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "EME",
-    "action": "SELL",
-    "qty": 2,
-    "limit": 788.94,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,584.60 USD (2 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,584.57 USD"
-      },
-      "equity": {
-        "current": "50,985",
-        "change": "-1",
-        "after": "50,984"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "-416",
-        "after": "14,701"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "-396",
-        "after": "14,001"
-      },
-      "position": {
-        "current": "2",
-        "change": "-2",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "ETN",
-    "action": "SELL",
-    "qty": 3,
-    "limit": 434.48,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,310.43 USD (3 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,310.40 USD"
-      },
-      "equity": {
-        "current": "50,985",
-        "change": "-1",
-        "after": "50,984"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "-344",
-        "after": "14,774"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "-328",
-        "after": "14,070"
-      },
-      "position": {
-        "current": "3",
-        "change": "-3",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "GEV",
-    "action": "SELL",
-    "qty": 1,
-    "limit": 988.19,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "991.78 USD (1 Shares)",
-        "commission": "0.02 USD",
-        "total": "991.76 USD"
-      },
-      "equity": {
-        "current": "50,988",
-        "change": "0",
-        "after": "50,988"
-      },
-      "initial": {
-        "current": "15,119",
-        "change": "-260",
-        "after": "14,858"
-      },
-      "maintenance": {
-        "current": "14,399",
-        "change": "-248",
-        "after": "14,150"
-      },
-      "position": {
-        "current": "1",
-        "change": "-1",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "GNRC",
-    "action": "SELL",
-    "qty": 8,
-    "limit": 214.29,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,722.40 USD (8 Shares)",
+        "amount": "2,078.10 USD (15 Shares)",
         "commission": "0.04 USD",
-        "total": "1,722.36 USD"
+        "total": "2,078.06 USD"
       },
       "equity": {
-        "current": "50,988",
+        "current": "45,422",
         "change": "-1",
-        "after": "50,987"
+        "after": "45,421"
       },
       "initial": {
-        "current": "15,119",
-        "change": "-452",
-        "after": "14,666"
+        "current": "16,348",
+        "change": "-546",
+        "after": "15,803"
       },
       "maintenance": {
-        "current": "14,399",
-        "change": "-431",
-        "after": "13,968"
+        "current": "15,600",
+        "change": "-520",
+        "after": "15,080"
       },
       "position": {
-        "current": "8",
-        "change": "-8",
+        "current": "15",
+        "change": "-15",
         "after": "0"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
@@ -360,471 +80,31 @@
     }
   },
   {
-    "ticker": "HII",
-    "action": "SELL",
-    "qty": 5,
-    "limit": 268.68,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,348 USD (5 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,347.97 USD"
-      },
-      "equity": {
-        "current": "50,988",
-        "change": "-2",
-        "after": "50,987"
-      },
-      "initial": {
-        "current": "15,119",
-        "change": "-354",
-        "after": "14,765"
-      },
-      "maintenance": {
-        "current": "14,399",
-        "change": "-337",
-        "after": "14,061"
-      },
-      "position": {
-        "current": "5",
-        "change": "-5",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "INTC",
-    "action": "SELL",
-    "qty": 2,
-    "limit": 119.37,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "240.18 USD (2 Shares)",
-        "commission": "0.00 USD",
-        "total": "240.18 USD"
-      },
-      "equity": {
-        "current": "50,990",
-        "change": "0",
-        "after": "50,990"
-      },
-      "initial": {
-        "current": "15,119",
-        "change": "-63",
-        "after": "15,056"
-      },
-      "maintenance": {
-        "current": "14,399",
-        "change": "-60",
-        "after": "14,339"
-      },
-      "position": {
-        "current": "16",
-        "change": "-2",
-        "after": "14"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "ISRG",
-    "action": "SELL",
-    "qty": 4,
-    "limit": 393.38,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,579.56 USD (4 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,579.53 USD"
-      },
-      "equity": {
-        "current": "50,990",
-        "change": "0",
-        "after": "50,990"
-      },
-      "initial": {
-        "current": "15,119",
-        "change": "-415",
-        "after": "14,704"
-      },
-      "maintenance": {
-        "current": "14,399",
-        "change": "-395",
-        "after": "14,004"
-      },
-      "position": {
-        "current": "4",
-        "change": "-4",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "IT",
-    "action": "SELL",
-    "qty": 7,
-    "limit": 186.11,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,304.66 USD (7 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,304.63 USD"
-      },
-      "equity": {
-        "current": "50,990",
-        "change": "-3",
-        "after": "50,988"
-      },
-      "initial": {
-        "current": "15,119",
-        "change": "-343",
-        "after": "14,776"
-      },
-      "maintenance": {
-        "current": "14,399",
-        "change": "-327",
-        "after": "14,073"
-      },
-      "position": {
-        "current": "7",
-        "change": "-7",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "LEN",
-    "action": "SELL",
-    "qty": 17,
-    "limit": 79.77,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,360.85 USD (17 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,360.82 USD"
-      },
-      "equity": {
-        "current": "50,990",
-        "change": "0",
-        "after": "50,990"
-      },
-      "initial": {
-        "current": "15,119",
-        "change": "-357",
-        "after": "14,762"
-      },
-      "maintenance": {
-        "current": "14,399",
-        "change": "-340",
-        "after": "14,059"
-      },
-      "position": {
-        "current": "17",
-        "change": "-17",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "LRCX",
-    "action": "SELL",
-    "qty": 5,
-    "limit": 347.04,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,746.95 USD (5 Shares)",
-        "commission": "0.04 USD",
-        "total": "1,746.91 USD"
-      },
-      "equity": {
-        "current": "50,989",
-        "change": "-1",
-        "after": "50,988"
-      },
-      "initial": {
-        "current": "15,119",
-        "change": "-459",
-        "after": "14,660"
-      },
-      "maintenance": {
-        "current": "14,399",
-        "change": "-437",
-        "after": "13,962"
-      },
-      "position": {
-        "current": "5",
-        "change": "-5",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "LULU",
-    "action": "SELL",
-    "qty": 12,
-    "limit": 93.69,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,128.36 USD (12 Shares)",
-        "commission": "0.02 USD",
-        "total": "1,128.34 USD"
-      },
-      "equity": {
-        "current": "50,989",
-        "change": "-1",
-        "after": "50,988"
-      },
-      "initial": {
-        "current": "15,119",
-        "change": "-296",
-        "after": "14,822"
-      },
-      "maintenance": {
-        "current": "14,399",
-        "change": "-282",
-        "after": "14,117"
-      },
-      "position": {
-        "current": "12",
-        "change": "-12",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "MCHP",
-    "action": "SELL",
-    "qty": 21,
-    "limit": 81.28,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,711.08 USD (21 Shares)",
-        "commission": "0.04 USD",
-        "total": "1,711.04 USD"
-      },
-      "equity": {
-        "current": "50,989",
-        "change": "0",
-        "after": "50,989"
-      },
-      "initial": {
-        "current": "15,119",
-        "change": "-449",
-        "after": "14,670"
-      },
-      "maintenance": {
-        "current": "14,399",
-        "change": "-428",
-        "after": "13,971"
-      },
-      "position": {
-        "current": "21",
-        "change": "-21",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "MPWR",
-    "action": "SELL",
-    "qty": 1,
-    "limit": 1420.75,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,429.72 USD (1 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,429.69 USD"
-      },
-      "equity": {
-        "current": "50,981",
-        "change": "-1",
-        "after": "50,980"
-      },
-      "initial": {
-        "current": "15,117",
-        "change": "-376",
-        "after": "14,741"
-      },
-      "maintenance": {
-        "current": "14,397",
-        "change": "-358",
-        "after": "14,039"
-      },
-      "position": {
-        "current": "1",
-        "change": "-1",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "ON",
-    "action": "SELL",
-    "qty": 20,
-    "limit": 82.97,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,660.80 USD (20 Shares)",
-        "commission": "0.03 USD",
-        "total": "1,660.77 USD"
-      },
-      "equity": {
-        "current": "50,981",
-        "change": "0",
-        "after": "50,981"
-      },
-      "initial": {
-        "current": "15,117",
-        "change": "-436",
-        "after": "14,681"
-      },
-      "maintenance": {
-        "current": "14,397",
-        "change": "-415",
-        "after": "13,982"
-      },
-      "position": {
-        "current": "20",
-        "change": "-20",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "TER",
-    "action": "SELL",
-    "qty": 4,
-    "limit": 446.4,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,789.16 USD (4 Shares)",
-        "commission": "0.04 USD",
-        "total": "1,789.12 USD"
-      },
-      "equity": {
-        "current": "50,981",
-        "change": "-1",
-        "after": "50,981"
-      },
-      "initial": {
-        "current": "15,117",
-        "change": "-470",
-        "after": "14,647"
-      },
-      "maintenance": {
-        "current": "14,397",
-        "change": "-447",
-        "after": "13,949"
-      },
-      "position": {
-        "current": "4",
-        "change": "-4",
-        "after": "0"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "TTWO",
+    "ticker": "CRWD",
     "action": "SELL",
     "qty": 6,
-    "limit": 202.12,
+    "limit": 226.39,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,217.22 USD (6 Shares)",
+        "amount": "1,366.08 USD (6 Shares)",
         "commission": "0.03 USD",
-        "total": "1,217.19 USD"
+        "total": "1,366.05 USD"
       },
       "equity": {
-        "current": "50,981",
-        "change": "-1",
-        "after": "50,981"
+        "current": "45,422",
+        "change": "0",
+        "after": "45,422"
       },
       "initial": {
-        "current": "15,117",
-        "change": "-320",
-        "after": "14,797"
+        "current": "16,348",
+        "change": "-359",
+        "after": "15,990"
       },
       "maintenance": {
-        "current": "14,397",
-        "change": "-304",
-        "after": "14,092"
+        "current": "15,600",
+        "change": "-342",
+        "after": "15,258"
       },
       "position": {
         "current": "6",
@@ -840,31 +120,711 @@
     }
   },
   {
-    "ticker": "ZBRA",
+    "ticker": "CTVA",
     "action": "SELL",
-    "qty": 4,
-    "limit": 376.25,
+    "qty": 142,
+    "limit": 9.31,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,508.20 USD (4 Shares)",
+        "amount": "1,331.96 USD (142 Shares)",
         "commission": "0.03 USD",
-        "total": "1,508.17 USD"
+        "total": "1,331.93 USD"
       },
       "equity": {
-        "current": "50,979",
-        "change": "-2",
-        "after": "50,978"
+        "current": "45,422",
+        "change": "-1",
+        "after": "45,421"
       },
       "initial": {
-        "current": "15,116",
-        "change": "-396",
-        "after": "14,720"
+        "current": "16,348",
+        "change": "-350",
+        "after": "15,999"
       },
       "maintenance": {
-        "current": "14,396",
-        "change": "-377",
-        "after": "14,019"
+        "current": "15,600",
+        "change": "-333",
+        "after": "15,267"
+      },
+      "position": {
+        "current": "142",
+        "change": "-142",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "CVNA",
+    "action": "SELL",
+    "qty": 6,
+    "limit": 71.34,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "430.32 USD (6 Shares)",
+        "commission": "0.01 USD",
+        "total": "430.31 USD"
+      },
+      "equity": {
+        "current": "45,406",
+        "change": "0",
+        "after": "45,406"
+      },
+      "initial": {
+        "current": "16,344",
+        "change": "-113",
+        "after": "16,231"
+      },
+      "maintenance": {
+        "current": "15,596",
+        "change": "-108",
+        "after": "15,488"
+      },
+      "position": {
+        "current": "26",
+        "change": "-6",
+        "after": "20"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "EIX",
+    "action": "SELL",
+    "qty": 8,
+    "limit": 59.83,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "481.12 USD (8 Shares)",
+        "commission": "0.01 USD",
+        "total": "481.11 USD"
+      },
+      "equity": {
+        "current": "45,406",
+        "change": "0",
+        "after": "45,406"
+      },
+      "initial": {
+        "current": "16,344",
+        "change": "-126",
+        "after": "16,218"
+      },
+      "maintenance": {
+        "current": "15,596",
+        "change": "-120",
+        "after": "15,476"
+      },
+      "position": {
+        "current": "32",
+        "change": "-8",
+        "after": "24"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "FISV",
+    "action": "SELL",
+    "qty": 38,
+    "limit": 63.15,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "2,410.72 USD (38 Shares)",
+        "commission": "0.05 USD",
+        "total": "2,410.67 USD"
+      },
+      "equity": {
+        "current": "45,406",
+        "change": "0",
+        "after": "45,406"
+      },
+      "initial": {
+        "current": "16,344",
+        "change": "-633",
+        "after": "15,712"
+      },
+      "maintenance": {
+        "current": "15,596",
+        "change": "-603",
+        "after": "14,993"
+      },
+      "position": {
+        "current": "38",
+        "change": "-38",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "GLW",
+    "action": "SELL",
+    "qty": 10,
+    "limit": 113.11,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,135.20 USD (10 Shares)",
+        "commission": "0.02 USD",
+        "total": "1,135.18 USD"
+      },
+      "equity": {
+        "current": "45,402",
+        "change": "0",
+        "after": "45,402"
+      },
+      "initial": {
+        "current": "16,343",
+        "change": "-298",
+        "after": "16,045"
+      },
+      "maintenance": {
+        "current": "15,595",
+        "change": "-284",
+        "after": "15,311"
+      },
+      "position": {
+        "current": "10",
+        "change": "-10",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "GM",
+    "action": "SELL",
+    "qty": 21,
+    "limit": 85.69,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,808.73 USD (21 Shares)",
+        "commission": "0.04 USD",
+        "total": "1,808.69 USD"
+      },
+      "equity": {
+        "current": "45,402",
+        "change": "0",
+        "after": "45,402"
+      },
+      "initial": {
+        "current": "16,343",
+        "change": "-475",
+        "after": "15,868"
+      },
+      "maintenance": {
+        "current": "15,595",
+        "change": "-452",
+        "after": "15,143"
+      },
+      "position": {
+        "current": "21",
+        "change": "-21",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "HON",
+    "action": "SELL",
+    "qty": 8,
+    "limit": 221.24,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,778 USD (8 Shares)",
+        "commission": "0.04 USD",
+        "total": "1,777.96 USD"
+      },
+      "equity": {
+        "current": "45,402",
+        "change": "-1",
+        "after": "45,402"
+      },
+      "initial": {
+        "current": "16,343",
+        "change": "-467",
+        "after": "15,876"
+      },
+      "maintenance": {
+        "current": "15,595",
+        "change": "-445",
+        "after": "15,150"
+      },
+      "position": {
+        "current": "8",
+        "change": "-8",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "IBM",
+    "action": "SELL",
+    "qty": 7,
+    "limit": 246.32,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,732.99 USD (7 Shares)",
+        "commission": "0.04 USD",
+        "total": "1,732.95 USD"
+      },
+      "equity": {
+        "current": "45,402",
+        "change": "-1",
+        "after": "45,401"
+      },
+      "initial": {
+        "current": "16,343",
+        "change": "-455",
+        "after": "15,888"
+      },
+      "maintenance": {
+        "current": "15,595",
+        "change": "-434",
+        "after": "15,161"
+      },
+      "position": {
+        "current": "7",
+        "change": "-7",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "MNST",
+    "action": "SELL",
+    "qty": 8,
+    "limit": 46.07,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "370.48 USD (8 Shares)",
+        "commission": "0.01 USD",
+        "total": "370.47 USD"
+      },
+      "equity": {
+        "current": "45,403",
+        "change": "0",
+        "after": "45,403"
+      },
+      "initial": {
+        "current": "16,344",
+        "change": "-97",
+        "after": "16,246"
+      },
+      "maintenance": {
+        "current": "15,595",
+        "change": "-93",
+        "after": "15,503"
+      },
+      "position": {
+        "current": "40",
+        "change": "-8",
+        "after": "32"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "MRNA",
+    "action": "SELL",
+    "qty": 3,
+    "limit": 223.58,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "670.74 USD (3 Shares)",
+        "commission": "0.01 USD",
+        "total": "670.73 USD"
+      },
+      "equity": {
+        "current": "45,403",
+        "change": "0",
+        "after": "45,403"
+      },
+      "initial": {
+        "current": "16,344",
+        "change": "-176",
+        "after": "16,168"
+      },
+      "maintenance": {
+        "current": "15,595",
+        "change": "-168",
+        "after": "15,428"
+      },
+      "position": {
+        "current": "9",
+        "change": "-3",
+        "after": "6"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "NKE",
+    "action": "SELL",
+    "qty": 51,
+    "limit": 37.78,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,937.49 USD (51 Shares)",
+        "commission": "0.04 USD",
+        "total": "1,937.45 USD"
+      },
+      "equity": {
+        "current": "45,403",
+        "change": "0",
+        "after": "45,403"
+      },
+      "initial": {
+        "current": "16,344",
+        "change": "-509",
+        "after": "15,835"
+      },
+      "maintenance": {
+        "current": "15,595",
+        "change": "-484",
+        "after": "15,111"
+      },
+      "position": {
+        "current": "51",
+        "change": "-51",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "ORCL",
+    "action": "SELL",
+    "qty": 12,
+    "limit": 124.58,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,500.60 USD (12 Shares)",
+        "commission": "0.03 USD",
+        "total": "1,500.57 USD"
+      },
+      "equity": {
+        "current": "45,397",
+        "change": "0",
+        "after": "45,397"
+      },
+      "initial": {
+        "current": "16,342",
+        "change": "-394",
+        "after": "15,948"
+      },
+      "maintenance": {
+        "current": "15,594",
+        "change": "-375",
+        "after": "15,218"
+      },
+      "position": {
+        "current": "12",
+        "change": "-12",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "PNR",
+    "action": "SELL",
+    "qty": 32,
+    "limit": 67.8,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "2,180.80 USD (32 Shares)",
+        "commission": "0.05 USD",
+        "total": "2,180.75 USD"
+      },
+      "equity": {
+        "current": "45,397",
+        "change": "0",
+        "after": "45,397"
+      },
+      "initial": {
+        "current": "16,342",
+        "change": "-573",
+        "after": "15,769"
+      },
+      "maintenance": {
+        "current": "15,594",
+        "change": "-545",
+        "after": "15,048"
+      },
+      "position": {
+        "current": "32",
+        "change": "-32",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "PODD",
+    "action": "SELL",
+    "qty": 4,
+    "limit": 152.89,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "614 USD (4 Shares)",
+        "commission": "0.01 USD",
+        "total": "613.99 USD"
+      },
+      "equity": {
+        "current": "45,397",
+        "change": "0",
+        "after": "45,397"
+      },
+      "initial": {
+        "current": "16,342",
+        "change": "-161",
+        "after": "16,181"
+      },
+      "maintenance": {
+        "current": "15,594",
+        "change": "-154",
+        "after": "15,440"
+      },
+      "position": {
+        "current": "13",
+        "change": "-4",
+        "after": "9"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "RDDT",
+    "action": "SELL",
+    "qty": 11,
+    "limit": 98.56,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,088.89 USD (11 Shares)",
+        "commission": "0.02 USD",
+        "total": "1,088.87 USD"
+      },
+      "equity": {
+        "current": "45,400",
+        "change": "0",
+        "after": "45,400"
+      },
+      "initial": {
+        "current": "16,343",
+        "change": "-286",
+        "after": "16,057"
+      },
+      "maintenance": {
+        "current": "15,594",
+        "change": "-272",
+        "after": "15,322"
+      },
+      "position": {
+        "current": "11",
+        "change": "-11",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "RTX",
+    "action": "SELL",
+    "qty": 2,
+    "limit": 197.08,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "396.20 USD (2 Shares)",
+        "commission": "0.01 USD",
+        "total": "396.19 USD"
+      },
+      "equity": {
+        "current": "45,400",
+        "change": "0",
+        "after": "45,400"
+      },
+      "initial": {
+        "current": "16,343",
+        "change": "-104",
+        "after": "16,239"
+      },
+      "maintenance": {
+        "current": "15,594",
+        "change": "-99",
+        "after": "15,495"
+      },
+      "position": {
+        "current": "9",
+        "change": "-2",
+        "after": "7"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "TSCO",
+    "action": "SELL",
+    "qty": 54,
+    "limit": 36.21,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,966.14 USD (54 Shares)",
+        "commission": "0.04 USD",
+        "total": "1,966.10 USD"
+      },
+      "equity": {
+        "current": "45,400",
+        "change": "0",
+        "after": "45,400"
+      },
+      "initial": {
+        "current": "16,343",
+        "change": "-516",
+        "after": "15,827"
+      },
+      "maintenance": {
+        "current": "15,594",
+        "change": "-492",
+        "after": "15,103"
+      },
+      "position": {
+        "current": "54",
+        "change": "-54",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "TSLA",
+    "action": "SELL",
+    "qty": 4,
+    "limit": 388.25,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,560.60 USD (4 Shares)",
+        "commission": "0.03 USD",
+        "total": "1,560.57 USD"
+      },
+      "equity": {
+        "current": "45,400",
+        "change": "0",
+        "after": "45,400"
+      },
+      "initial": {
+        "current": "16,343",
+        "change": "-410",
+        "after": "15,933"
+      },
+      "maintenance": {
+        "current": "15,594",
+        "change": "-390",
+        "after": "15,204"
       },
       "position": {
         "current": "4",
@@ -880,36 +840,116 @@
     }
   },
   {
-    "ticker": "APH",
-    "action": "BUY",
-    "qty": 19,
-    "limit": 87.55,
+    "ticker": "UAL",
+    "action": "SELL",
+    "qty": 15,
+    "limit": 110.42,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,655.09 USD (19 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,655.09 USD"
+        "amount": "1,662 USD (15 Shares)",
+        "commission": "0.03 USD",
+        "total": "1,661.97 USD"
       },
       "equity": {
-        "current": "50,979",
+        "current": "45,408",
         "change": "-1",
-        "after": "50,979"
+        "after": "45,406"
       },
       "initial": {
-        "current": "15,116",
-        "change": "434",
-        "after": "15,550"
+        "current": "16,345",
+        "change": "-437",
+        "after": "15,908"
       },
       "maintenance": {
-        "current": "14,396",
-        "change": "414",
-        "after": "14,810"
+        "current": "15,596",
+        "change": "-416",
+        "after": "15,181"
+      },
+      "position": {
+        "current": "15",
+        "change": "-15",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "WDAY",
+    "action": "SELL",
+    "qty": 9,
+    "limit": 195.39,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,767.15 USD (9 Shares)",
+        "commission": "0.04 USD",
+        "total": "1,767.11 USD"
+      },
+      "equity": {
+        "current": "45,408",
+        "change": "-1",
+        "after": "45,406"
+      },
+      "initial": {
+        "current": "16,345",
+        "change": "-464",
+        "after": "15,880"
+      },
+      "maintenance": {
+        "current": "15,596",
+        "change": "-442",
+        "after": "15,154"
+      },
+      "position": {
+        "current": "9",
+        "change": "-9",
+        "after": "0"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "ALB",
+    "action": "BUY",
+    "qty": 16,
+    "limit": 94.02,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,497.60 USD (16 Shares)",
+        "commission": "0.00 USD",
+        "total": "1,497.60 USD"
+      },
+      "equity": {
+        "current": "45,408",
+        "change": "0",
+        "after": "45,407"
+      },
+      "initial": {
+        "current": "16,345",
+        "change": "393",
+        "after": "16,738"
+      },
+      "maintenance": {
+        "current": "15,596",
+        "change": "374",
+        "after": "15,971"
       },
       "position": {
         "current": "0",
-        "change": "19",
-        "after": "19"
+        "change": "16",
+        "after": "16"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -920,156 +960,156 @@
     }
   },
   {
-    "ticker": "APTV",
-    "action": "BUY",
-    "qty": 6,
-    "limit": 43.73,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "261.36 USD (6 Shares)",
-        "commission": "0.00 USD",
-        "total": "261.36 USD"
-      },
-      "equity": {
-        "current": "50,979",
-        "change": "0",
-        "after": "50,979"
-      },
-      "initial": {
-        "current": "15,116",
-        "change": "69",
-        "after": "15,185"
-      },
-      "maintenance": {
-        "current": "14,396",
-        "change": "65",
-        "after": "14,462"
-      },
-      "position": {
-        "current": "33",
-        "change": "6",
-        "after": "39"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "AXON",
+    "ticker": "AMD",
     "action": "BUY",
     "qty": 2,
-    "limit": 416.91,
+    "limit": 534.13,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "829.62 USD (2 Shares)",
+        "amount": "1,063.80 USD (2 Shares)",
         "commission": "0.00 USD",
-        "total": "829.62 USD"
+        "total": "1,063.80 USD"
       },
       "equity": {
-        "current": "50,979",
-        "change": "-1",
-        "after": "50,979"
-      },
-      "initial": {
-        "current": "15,116",
-        "change": "218",
-        "after": "15,334"
-      },
-      "maintenance": {
-        "current": "14,396",
-        "change": "207",
-        "after": "14,604"
-      },
-      "position": {
-        "current": "2",
-        "change": "2",
-        "after": "4"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "BSX",
-    "action": "BUY",
-    "qty": 9,
-    "limit": 43.21,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "387.18 USD (9 Shares)",
-        "commission": "0.00 USD",
-        "total": "387.18 USD"
-      },
-      "equity": {
-        "current": "50,979",
+        "current": "45,408",
         "change": "0",
-        "after": "50,979"
+        "after": "45,407"
       },
       "initial": {
-        "current": "15,116",
-        "change": "102",
-        "after": "15,218"
+        "current": "16,345",
+        "change": "279",
+        "after": "16,624"
       },
       "maintenance": {
-        "current": "14,396",
-        "change": "97",
-        "after": "14,493"
-      },
-      "position": {
-        "current": "31",
-        "change": "9",
-        "after": "40"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "CHTR",
-    "action": "BUY",
-    "qty": 15,
-    "limit": 109.87,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,639.50 USD (15 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,639.50 USD"
-      },
-      "equity": {
-        "current": "50,979",
-        "change": "-1",
-        "after": "50,978"
-      },
-      "initial": {
-        "current": "15,116",
-        "change": "430",
-        "after": "15,546"
-      },
-      "maintenance": {
-        "current": "14,396",
-        "change": "410",
-        "after": "14,806"
+        "current": "15,596",
+        "change": "266",
+        "after": "15,862"
       },
       "position": {
         "current": "0",
-        "change": "15",
-        "after": "15"
+        "change": "2",
+        "after": "2"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "BE",
+    "action": "BUY",
+    "qty": 7,
+    "limit": 191.68,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,336.02 USD (7 Shares)",
+        "commission": "0.00 USD",
+        "total": "1,336.02 USD"
+      },
+      "equity": {
+        "current": "45,415",
+        "change": "0",
+        "after": "45,414"
+      },
+      "initial": {
+        "current": "16,347",
+        "change": "351",
+        "after": "16,697"
+      },
+      "maintenance": {
+        "current": "15,598",
+        "change": "334",
+        "after": "15,932"
+      },
+      "position": {
+        "current": "0",
+        "change": "7",
+        "after": "7"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "CIEN",
+    "action": "BUY",
+    "qty": 1,
+    "limit": 281.19,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "279.85 USD (1 Shares)",
+        "commission": "0.00 USD",
+        "total": "279.85 USD"
+      },
+      "equity": {
+        "current": "45,415",
+        "change": "0",
+        "after": "45,415"
+      },
+      "initial": {
+        "current": "16,347",
+        "change": "73",
+        "after": "16,420"
+      },
+      "maintenance": {
+        "current": "15,598",
+        "change": "70",
+        "after": "15,668"
+      },
+      "position": {
+        "current": "4",
+        "change": "1",
+        "after": "5"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "COHR",
+    "action": "BUY",
+    "qty": 1,
+    "limit": 218.29,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "217.02 USD (1 Shares)",
+        "commission": "0.00 USD",
+        "total": "217.02 USD"
+      },
+      "equity": {
+        "current": "45,415",
+        "change": "0",
+        "after": "45,415"
+      },
+      "initial": {
+        "current": "16,347",
+        "change": "57",
+        "after": "16,404"
+      },
+      "maintenance": {
+        "current": "15,598",
+        "change": "54",
+        "after": "15,652"
+      },
+      "position": {
+        "current": "5",
+        "change": "1",
+        "after": "6"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -1082,154 +1122,34 @@
   {
     "ticker": "COIN",
     "action": "BUY",
-    "qty": 9,
-    "limit": 183.51,
+    "qty": 2,
+    "limit": 129.29,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,642.77 USD (9 Shares)",
+        "amount": "257.58 USD (2 Shares)",
         "commission": "0.00 USD",
-        "total": "1,642.77 USD"
+        "total": "257.58 USD"
       },
       "equity": {
-        "current": "50,979",
-        "change": "-1",
-        "after": "50,978"
-      },
-      "initial": {
-        "current": "15,116",
-        "change": "431",
-        "after": "15,547"
-      },
-      "maintenance": {
-        "current": "14,396",
-        "change": "411",
-        "after": "14,807"
-      },
-      "position": {
-        "current": "0",
-        "change": "9",
-        "after": "9"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "CRWD",
-    "action": "BUY",
-    "qty": 6,
-    "limit": 270.24,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,614.60 USD (6 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,614.60 USD"
-      },
-      "equity": {
-        "current": "50,985",
+        "current": "45,429",
         "change": "0",
-        "after": "50,985"
+        "after": "45,428"
       },
       "initial": {
-        "current": "15,118",
-        "change": "424",
-        "after": "15,542"
+        "current": "16,350",
+        "change": "68",
+        "after": "16,418"
       },
       "maintenance": {
-        "current": "14,398",
-        "change": "404",
-        "after": "14,801"
+        "current": "15,602",
+        "change": "64",
+        "after": "15,666"
       },
       "position": {
-        "current": "0",
-        "change": "6",
-        "after": "6"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "CTVA",
-    "action": "BUY",
-    "qty": 142,
-    "limit": 12.15,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,719.62 USD (142 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,719.62 USD"
-      },
-      "equity": {
-        "current": "50,985",
-        "change": "-1",
-        "after": "50,984"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "451",
-        "after": "15,569"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "430",
-        "after": "14,828"
-      },
-      "position": {
-        "current": "0",
-        "change": "142",
-        "after": "142"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "CVNA",
-    "action": "BUY",
-    "qty": 26,
-    "limit": 64.7,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,666.60 USD (26 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,666.60 USD"
-      },
-      "equity": {
-        "current": "50,985",
-        "change": "0",
-        "after": "50,985"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "437",
-        "after": "15,555"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "416",
-        "after": "14,814"
-      },
-      "position": {
-        "current": "0",
-        "change": "26",
-        "after": "26"
+        "current": "9",
+        "change": "2",
+        "after": "11"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -1242,34 +1162,34 @@
   {
     "ticker": "DDOG",
     "action": "BUY",
-    "qty": 6,
-    "limit": 278.76,
+    "qty": 2,
+    "limit": 185.1,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,668.30 USD (6 Shares)",
+        "amount": "367.74 USD (2 Shares)",
         "commission": "0.00 USD",
-        "total": "1,668.30 USD"
+        "total": "367.74 USD"
       },
       "equity": {
-        "current": "50,985",
-        "change": "-2",
-        "after": "50,983"
+        "current": "45,429",
+        "change": "0",
+        "after": "45,428"
       },
       "initial": {
-        "current": "15,118",
-        "change": "438",
-        "after": "15,555"
+        "current": "16,350",
+        "change": "96",
+        "after": "16,447"
       },
       "maintenance": {
-        "current": "14,398",
-        "change": "417",
-        "after": "14,815"
+        "current": "15,602",
+        "change": "92",
+        "after": "15,693"
       },
       "position": {
-        "current": "0",
-        "change": "6",
-        "after": "6"
+        "current": "6",
+        "change": "2",
+        "after": "8"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -1282,34 +1202,34 @@
   {
     "ticker": "DELL",
     "action": "BUY",
-    "qty": 3,
-    "limit": 568.63,
+    "qty": 1,
+    "limit": 344.29,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,697.82 USD (3 Shares)",
+        "amount": "342.27 USD (1 Shares)",
         "commission": "0.00 USD",
-        "total": "1,697.82 USD"
+        "total": "342.27 USD"
       },
       "equity": {
-        "current": "50,986",
-        "change": "-1",
-        "after": "50,985"
+        "current": "45,429",
+        "change": "0",
+        "after": "45,428"
       },
       "initial": {
-        "current": "15,118",
-        "change": "446",
-        "after": "15,564"
+        "current": "16,350",
+        "change": "90",
+        "after": "16,440"
       },
       "maintenance": {
-        "current": "14,398",
-        "change": "424",
-        "after": "14,822"
+        "current": "15,602",
+        "change": "86",
+        "after": "15,687"
       },
       "position": {
-        "current": "0",
-        "change": "3",
-        "after": "3"
+        "current": "3",
+        "change": "1",
+        "after": "4"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -1320,36 +1240,36 @@
     }
   },
   {
-    "ticker": "EIX",
+    "ticker": "EXPE",
     "action": "BUY",
     "qty": 5,
-    "limit": 53.84,
+    "limit": 259.98,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "267.75 USD (5 Shares)",
+        "amount": "1,292.55 USD (5 Shares)",
         "commission": "0.00 USD",
-        "total": "267.75 USD"
+        "total": "1,292.55 USD"
       },
       "equity": {
-        "current": "50,986",
+        "current": "45,429",
         "change": "0",
-        "after": "50,986"
+        "after": "45,429"
       },
       "initial": {
-        "current": "15,118",
-        "change": "70",
-        "after": "15,188"
+        "current": "16,350",
+        "change": "339",
+        "after": "16,690"
       },
       "maintenance": {
-        "current": "14,398",
-        "change": "67",
-        "after": "14,465"
+        "current": "15,602",
+        "change": "323",
+        "after": "15,925"
       },
       "position": {
-        "current": "27",
+        "current": "0",
         "change": "5",
-        "after": "32"
+        "after": "5"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -1360,156 +1280,36 @@
     }
   },
   {
-    "ticker": "FISV",
+    "ticker": "FIS",
     "action": "BUY",
-    "qty": 10,
-    "limit": 44.57,
+    "qty": 50,
+    "limit": 29.6,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "443.50 USD (10 Shares)",
+        "amount": "1,475 USD (50 Shares)",
         "commission": "0.00 USD",
-        "total": "443.50 USD"
+        "total": "1,475.00 USD"
       },
       "equity": {
-        "current": "50,986",
+        "current": "45,439",
         "change": "0",
-        "after": "50,986"
+        "after": "45,439"
       },
       "initial": {
-        "current": "15,118",
-        "change": "116",
-        "after": "15,234"
+        "current": "16,353",
+        "change": "387",
+        "after": "16,740"
       },
       "maintenance": {
-        "current": "14,398",
-        "change": "111",
-        "after": "14,509"
-      },
-      "position": {
-        "current": "28",
-        "change": "10",
-        "after": "38"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "GM",
-    "action": "BUY",
-    "qty": 4,
-    "limit": 78.99,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "314.12 USD (4 Shares)",
-        "commission": "0.00 USD",
-        "total": "314.12 USD"
-      },
-      "equity": {
-        "current": "50,986",
-        "change": "0",
-        "after": "50,986"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "82",
-        "after": "15,200"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "79",
-        "after": "14,477"
-      },
-      "position": {
-        "current": "17",
-        "change": "4",
-        "after": "21"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "HON",
-    "action": "BUY",
-    "qty": 1,
-    "limit": 215.14,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "213.92 USD (1 Shares)",
-        "commission": "0.00 USD",
-        "total": "213.92 USD"
-      },
-      "equity": {
-        "current": "50,986",
-        "change": "0",
-        "after": "50,986"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "56",
-        "after": "15,174"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "53",
-        "after": "14,452"
-      },
-      "position": {
-        "current": "7",
-        "change": "1",
-        "after": "8"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "HOOD",
-    "action": "BUY",
-    "qty": 15,
-    "limit": 114.42,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,712.25 USD (15 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,712.25 USD"
-      },
-      "equity": {
-        "current": "50,986",
-        "change": "0",
-        "after": "50,986"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "449",
-        "after": "15,568"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "428",
-        "after": "14,826"
+        "current": "15,604",
+        "change": "369",
+        "after": "15,973"
       },
       "position": {
         "current": "0",
-        "change": "15",
-        "after": "15"
+        "change": "50",
+        "after": "50"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -1520,151 +1320,71 @@
     }
   },
   {
-    "ticker": "HPE",
+    "ticker": "FLEX",
     "action": "BUY",
-    "qty": 24,
-    "limit": 70.13,
+    "qty": 20,
+    "limit": 75.31,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,671.36 USD (24 Shares)",
+        "amount": "1,499 USD (20 Shares)",
         "commission": "0.00 USD",
-        "total": "1,671.36 USD"
+        "total": "1,499.00 USD"
       },
       "equity": {
-        "current": "50,986",
-        "change": "0",
-        "after": "50,986"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "439",
-        "after": "15,557"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "418",
-        "after": "14,816"
-      },
-      "position": {
-        "current": "0",
-        "change": "24",
-        "after": "24"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "IBM",
-    "action": "BUY",
-    "qty": 1,
-    "limit": 223.32,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "222.26 USD (1 Shares)",
-        "commission": "0.00 USD",
-        "total": "222.26 USD"
-      },
-      "equity": {
-        "current": "50,980",
-        "change": "0",
-        "after": "50,979"
-      },
-      "initial": {
-        "current": "15,116",
-        "change": "58",
-        "after": "15,175"
-      },
-      "maintenance": {
-        "current": "14,396",
-        "change": "56",
-        "after": "14,452"
-      },
-      "position": {
-        "current": "6",
-        "change": "1",
-        "after": "7"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "KLAC",
-    "action": "BUY",
-    "qty": 8,
-    "limit": 207.48,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,654.24 USD (8 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,654.24 USD"
-      },
-      "equity": {
-        "current": "50,980",
-        "change": "0",
-        "after": "50,979"
-      },
-      "initial": {
-        "current": "15,116",
-        "change": "434",
-        "after": "15,550"
-      },
-      "maintenance": {
-        "current": "14,396",
-        "change": "413",
-        "after": "14,810"
-      },
-      "position": {
-        "current": "0",
-        "change": "8",
-        "after": "8"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "LITE",
-    "action": "BUY",
-    "qty": 1,
-    "limit": 1089.6,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,085.96 USD (1 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,085.96 USD"
-      },
-      "equity": {
-        "current": "50,980",
+        "current": "45,439",
         "change": "-1",
-        "after": "50,979"
+        "after": "45,438"
       },
       "initial": {
-        "current": "15,116",
-        "change": "285",
-        "after": "15,401"
+        "current": "16,353",
+        "change": "393",
+        "after": "16,746"
       },
       "maintenance": {
-        "current": "14,396",
-        "change": "271",
-        "after": "14,668"
+        "current": "15,604",
+        "change": "375",
+        "after": "15,979"
+      },
+      "position": {
+        "current": "0",
+        "change": "20",
+        "after": "20"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "GEV",
+    "action": "BUY",
+    "qty": 1,
+    "limit": 798.15,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "795.14 USD (1 Shares)",
+        "commission": "0.00 USD",
+        "total": "795.14 USD"
+      },
+      "equity": {
+        "current": "45,439",
+        "change": "0",
+        "after": "45,439"
+      },
+      "initial": {
+        "current": "16,353",
+        "change": "209",
+        "after": "16,562"
+      },
+      "maintenance": {
+        "current": "15,604",
+        "change": "199",
+        "after": "15,803"
       },
       "position": {
         "current": "0",
@@ -1680,36 +1400,36 @@
     }
   },
   {
-    "ticker": "MNST",
+    "ticker": "GNRC",
     "action": "BUY",
-    "qty": 40,
-    "limit": 42.7,
+    "qty": 7,
+    "limit": 191.11,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,699.20 USD (40 Shares)",
+        "amount": "1,333.64 USD (7 Shares)",
         "commission": "0.00 USD",
-        "total": "1,699.20 USD"
+        "total": "1,333.64 USD"
       },
       "equity": {
-        "current": "50,980",
-        "change": "0",
-        "after": "50,979"
+        "current": "45,436",
+        "change": "-1",
+        "after": "45,435"
       },
       "initial": {
-        "current": "15,116",
-        "change": "446",
-        "after": "15,562"
+        "current": "16,352",
+        "change": "350",
+        "after": "16,702"
       },
       "maintenance": {
-        "current": "14,396",
-        "change": "425",
-        "after": "14,821"
+        "current": "15,603",
+        "change": "333",
+        "after": "15,936"
       },
       "position": {
         "current": "0",
-        "change": "40",
-        "after": "40"
+        "change": "7",
+        "after": "7"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -1720,36 +1440,276 @@
     }
   },
   {
-    "ticker": "MRNA",
+    "ticker": "HOOD",
     "action": "BUY",
-    "qty": 9,
-    "limit": 190.49,
+    "qty": 4,
+    "limit": 78.47,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,697.49 USD (9 Shares)",
+        "amount": "312.88 USD (4 Shares)",
         "commission": "0.00 USD",
-        "total": "1,697.49 USD"
+        "total": "312.88 USD"
       },
       "equity": {
-        "current": "50,977",
+        "current": "45,436",
         "change": "0",
-        "after": "50,977"
+        "after": "45,436"
       },
       "initial": {
-        "current": "15,116",
-        "change": "446",
-        "after": "15,561"
+        "current": "16,352",
+        "change": "82",
+        "after": "16,434"
       },
       "maintenance": {
-        "current": "14,396",
-        "change": "424",
-        "after": "14,820"
+        "current": "15,603",
+        "change": "78",
+        "after": "15,682"
+      },
+      "position": {
+        "current": "15",
+        "change": "4",
+        "after": "19"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "HPE",
+    "action": "BUY",
+    "qty": 7,
+    "limit": 48.3,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "335.86 USD (7 Shares)",
+        "commission": "0.00 USD",
+        "total": "335.86 USD"
+      },
+      "equity": {
+        "current": "45,435",
+        "change": "0",
+        "after": "45,435"
+      },
+      "initial": {
+        "current": "16,352",
+        "change": "88",
+        "after": "16,440"
+      },
+      "maintenance": {
+        "current": "15,603",
+        "change": "84",
+        "after": "15,687"
+      },
+      "position": {
+        "current": "24",
+        "change": "7",
+        "after": "31"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "ILMN",
+    "action": "BUY",
+    "qty": 7,
+    "limit": 208.78,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,454.53 USD (7 Shares)",
+        "commission": "0.00 USD",
+        "total": "1,454.53 USD"
+      },
+      "equity": {
+        "current": "45,435",
+        "change": "-1",
+        "after": "45,434"
+      },
+      "initial": {
+        "current": "16,352",
+        "change": "382",
+        "after": "16,733"
+      },
+      "maintenance": {
+        "current": "15,603",
+        "change": "363",
+        "after": "15,966"
       },
       "position": {
         "current": "0",
-        "change": "9",
+        "change": "7",
+        "after": "7"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "INTC",
+    "action": "BUY",
+    "qty": 11,
+    "limit": 59.62,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "653.40 USD (11 Shares)",
+        "commission": "0.00 USD",
+        "total": "653.40 USD"
+      },
+      "equity": {
+        "current": "45,435",
+        "change": "0",
+        "after": "45,435"
+      },
+      "initial": {
+        "current": "16,352",
+        "change": "172",
+        "after": "16,523"
+      },
+      "maintenance": {
+        "current": "15,603",
+        "change": "163",
+        "after": "15,767"
+      },
+      "position": {
+        "current": "14",
+        "change": "11",
+        "after": "25"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "KLAC",
+    "action": "BUY",
+    "qty": 1,
+    "limit": 151.92,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "151.50 USD (1 Shares)",
+        "commission": "0.00 USD",
+        "total": "151.50 USD"
+      },
+      "equity": {
+        "current": "45,435",
+        "change": "0",
+        "after": "45,435"
+      },
+      "initial": {
+        "current": "16,352",
+        "change": "40",
+        "after": "16,392"
+      },
+      "maintenance": {
+        "current": "15,603",
+        "change": "38",
+        "after": "15,641"
+      },
+      "position": {
+        "current": "8",
+        "change": "1",
         "after": "9"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "LITE",
+    "action": "BUY",
+    "qty": 1,
+    "limit": 595.2,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "591.02 USD (1 Shares)",
+        "commission": "0.00 USD",
+        "total": "591.02 USD"
+      },
+      "equity": {
+        "current": "45,414",
+        "change": "0",
+        "after": "45,413"
+      },
+      "initial": {
+        "current": "16,346",
+        "change": "155",
+        "after": "16,501"
+      },
+      "maintenance": {
+        "current": "15,598",
+        "change": "148",
+        "after": "15,746"
+      },
+      "position": {
+        "current": "1",
+        "change": "1",
+        "after": "2"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "LULU",
+    "action": "BUY",
+    "qty": 14,
+    "limit": 106.23,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,481.76 USD (14 Shares)",
+        "commission": "0.00 USD",
+        "total": "1,481.76 USD"
+      },
+      "equity": {
+        "current": "45,414",
+        "change": "-1",
+        "after": "45,413"
+      },
+      "initial": {
+        "current": "16,346",
+        "change": "389",
+        "after": "16,735"
+      },
+      "maintenance": {
+        "current": "15,598",
+        "change": "370",
+        "after": "15,968"
+      },
+      "position": {
+        "current": "0",
+        "change": "14",
+        "after": "14"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -1762,34 +1722,74 @@
   {
     "ticker": "MRVL",
     "action": "BUY",
-    "qty": 6,
-    "limit": 273.3,
+    "qty": 3,
+    "limit": 156.96,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,633.26 USD (6 Shares)",
+        "amount": "469.20 USD (3 Shares)",
         "commission": "0.00 USD",
-        "total": "1,633.26 USD"
+        "total": "469.20 USD"
       },
       "equity": {
-        "current": "50,977",
-        "change": "-1",
-        "after": "50,976"
+        "current": "45,414",
+        "change": "0",
+        "after": "45,413"
       },
       "initial": {
-        "current": "15,116",
-        "change": "429",
-        "after": "15,544"
+        "current": "16,346",
+        "change": "123",
+        "after": "16,469"
       },
       "maintenance": {
-        "current": "14,396",
-        "change": "408",
-        "after": "14,804"
+        "current": "15,598",
+        "change": "117",
+        "after": "15,715"
+      },
+      "position": {
+        "current": "6",
+        "change": "3",
+        "after": "9"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "NOW",
+    "action": "BUY",
+    "qty": 14,
+    "limit": 103,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,434.72 USD (14 Shares)",
+        "commission": "0.00 USD",
+        "total": "1,434.72 USD"
+      },
+      "equity": {
+        "current": "45,418",
+        "change": "0",
+        "after": "45,418"
+      },
+      "initial": {
+        "current": "16,347",
+        "change": "377",
+        "after": "16,724"
+      },
+      "maintenance": {
+        "current": "15,599",
+        "change": "359",
+        "after": "15,958"
       },
       "position": {
         "current": "0",
-        "change": "6",
-        "after": "6"
+        "change": "14",
+        "after": "14"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -1800,116 +1800,36 @@
     }
   },
   {
-    "ticker": "NKE",
-    "action": "BUY",
-    "qty": 12,
-    "limit": 33.64,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "402.72 USD (12 Shares)",
-        "commission": "0.00 USD",
-        "total": "402.72 USD"
-      },
-      "equity": {
-        "current": "50,977",
-        "change": "0",
-        "after": "50,977"
-      },
-      "initial": {
-        "current": "15,116",
-        "change": "106",
-        "after": "15,221"
-      },
-      "maintenance": {
-        "current": "14,396",
-        "change": "101",
-        "after": "14,497"
-      },
-      "position": {
-        "current": "39",
-        "change": "12",
-        "after": "51"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "ORCL",
-    "action": "BUY",
-    "qty": 2,
-    "limit": 142.19,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "283.46 USD (2 Shares)",
-        "commission": "0.00 USD",
-        "total": "283.46 USD"
-      },
-      "equity": {
-        "current": "50,980",
-        "change": "0",
-        "after": "50,980"
-      },
-      "initial": {
-        "current": "15,116",
-        "change": "74",
-        "after": "15,191"
-      },
-      "maintenance": {
-        "current": "14,397",
-        "change": "71",
-        "after": "14,467"
-      },
-      "position": {
-        "current": "10",
-        "change": "2",
-        "after": "12"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "PNR",
+    "ticker": "OKTA",
     "action": "BUY",
     "qty": 8,
-    "limit": 53.59,
+    "limit": 183.35,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "426.64 USD (8 Shares)",
+        "amount": "1,461.20 USD (8 Shares)",
         "commission": "0.00 USD",
-        "total": "426.64 USD"
+        "total": "1,461.20 USD"
       },
       "equity": {
-        "current": "50,980",
-        "change": "0",
-        "after": "50,980"
+        "current": "45,418",
+        "change": "-1",
+        "after": "45,417"
       },
       "initial": {
-        "current": "15,116",
-        "change": "112",
-        "after": "15,228"
+        "current": "16,347",
+        "change": "383",
+        "after": "16,731"
       },
       "maintenance": {
-        "current": "14,397",
-        "change": "107",
-        "after": "14,503"
+        "current": "15,599",
+        "change": "365",
+        "after": "15,964"
       },
       "position": {
-        "current": "24",
+        "current": "0",
         "change": "8",
-        "after": "32"
+        "after": "8"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -1920,35 +1840,35 @@
     }
   },
   {
-    "ticker": "PODD",
+    "ticker": "P",
     "action": "BUY",
-    "qty": 3,
-    "limit": 132.11,
+    "qty": 13,
+    "limit": 108.28,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "394.29 USD (3 Shares)",
+        "amount": "1,398.02 USD (13 Shares)",
         "commission": "0.00 USD",
-        "total": "394.29 USD"
+        "total": "1,398.02 USD"
       },
       "equity": {
-        "current": "50,980",
-        "change": "0",
-        "after": "50,980"
+        "current": "45,418",
+        "change": "-1",
+        "after": "45,417"
       },
       "initial": {
-        "current": "15,116",
-        "change": "103",
-        "after": "15,220"
+        "current": "16,347",
+        "change": "367",
+        "after": "16,714"
       },
       "maintenance": {
-        "current": "14,397",
-        "change": "99",
-        "after": "14,495"
+        "current": "15,599",
+        "change": "349",
+        "after": "15,948"
       },
       "position": {
-        "current": "10",
-        "change": "3",
+        "current": "0",
+        "change": "13",
         "after": "13"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
@@ -1960,36 +1880,36 @@
     }
   },
   {
-    "ticker": "PSKY",
+    "ticker": "PWR",
     "action": "BUY",
-    "qty": 186,
-    "limit": 9.29,
+    "qty": 2,
+    "limit": 600.78,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,716.78 USD (186 Shares)",
+        "amount": "1,198.40 USD (2 Shares)",
         "commission": "0.00 USD",
-        "total": "1,716.78 USD"
+        "total": "1,198.40 USD"
       },
       "equity": {
-        "current": "50,980",
+        "current": "45,418",
         "change": "-1",
-        "after": "50,979"
+        "after": "45,417"
       },
       "initial": {
-        "current": "15,116",
-        "change": "450",
-        "after": "15,567"
+        "current": "16,347",
+        "change": "314",
+        "after": "16,662"
       },
       "maintenance": {
-        "current": "14,397",
-        "change": "429",
-        "after": "14,825"
+        "current": "15,599",
+        "change": "299",
+        "after": "15,898"
       },
       "position": {
         "current": "0",
-        "change": "186",
-        "after": "186"
+        "change": "2",
+        "after": "2"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,
@@ -2000,31 +1920,111 @@
     }
   },
   {
-    "ticker": "RDDT",
+    "ticker": "SMCI",
     "action": "BUY",
-    "qty": 11,
-    "limit": 146.92,
+    "qty": 15,
+    "limit": 26.76,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "1,616.12 USD (11 Shares)",
+        "amount": "399.30 USD (15 Shares)",
         "commission": "0.00 USD",
-        "total": "1,616.12 USD"
+        "total": "399.30 USD"
       },
       "equity": {
-        "current": "50,984",
+        "current": "45,406",
         "change": "0",
-        "after": "50,984"
+        "after": "45,406"
       },
       "initial": {
-        "current": "15,118",
-        "change": "426",
-        "after": "15,543"
+        "current": "16,344",
+        "change": "105",
+        "after": "16,449"
       },
       "maintenance": {
-        "current": "14,398",
-        "change": "406",
-        "after": "14,803"
+        "current": "15,596",
+        "change": "100",
+        "after": "15,696"
+      },
+      "position": {
+        "current": "41",
+        "change": "15",
+        "after": "56"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "VRT",
+    "action": "BUY",
+    "qty": 1,
+    "limit": 202.6,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "201.89 USD (1 Shares)",
+        "commission": "0.00 USD",
+        "total": "201.89 USD"
+      },
+      "equity": {
+        "current": "45,406",
+        "change": "0",
+        "after": "45,406"
+      },
+      "initial": {
+        "current": "16,344",
+        "change": "53",
+        "after": "16,397"
+      },
+      "maintenance": {
+        "current": "15,596",
+        "change": "50",
+        "after": "15,646"
+      },
+      "position": {
+        "current": "6",
+        "change": "1",
+        "after": "7"
+      },
+      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
+      "error": null,
+      "warns": [
+        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
+      ],
+      "accruedInterest": null
+    }
+  },
+  {
+    "ticker": "VST",
+    "action": "BUY",
+    "qty": 11,
+    "limit": 132.2,
+    "status": 200,
+    "resp": {
+      "amount": {
+        "amount": "1,449.58 USD (11 Shares)",
+        "commission": "0.00 USD",
+        "total": "1,449.58 USD"
+      },
+      "equity": {
+        "current": "45,406",
+        "change": "0",
+        "after": "45,406"
+      },
+      "initial": {
+        "current": "16,344",
+        "change": "380",
+        "after": "16,725"
+      },
+      "maintenance": {
+        "current": "15,596",
+        "change": "362",
+        "after": "15,958"
       },
       "position": {
         "current": "0",
@@ -2040,236 +2040,36 @@
     }
   },
   {
-    "ticker": "RTX",
+    "ticker": "VTRS",
     "action": "BUY",
-    "qty": 2,
-    "limit": 185.98,
+    "qty": 71,
+    "limit": 20.96,
     "status": 200,
     "resp": {
       "amount": {
-        "amount": "370 USD (2 Shares)",
+        "amount": "1,478.22 USD (71 Shares)",
         "commission": "0.00 USD",
-        "total": "370.00 USD"
+        "total": "1,478.22 USD"
       },
       "equity": {
-        "current": "50,984",
+        "current": "45,406",
         "change": "0",
-        "after": "50,983"
+        "after": "45,406"
       },
       "initial": {
-        "current": "15,118",
-        "change": "97",
-        "after": "15,215"
+        "current": "16,344",
+        "change": "388",
+        "after": "16,732"
       },
       "maintenance": {
-        "current": "14,398",
-        "change": "92",
-        "after": "14,490"
-      },
-      "position": {
-        "current": "7",
-        "change": "2",
-        "after": "9"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "TSCO",
-    "action": "BUY",
-    "qty": 54,
-    "limit": 31.51,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,693.44 USD (54 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,693.44 USD"
-      },
-      "equity": {
-        "current": "50,984",
-        "change": "0",
-        "after": "50,983"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "444",
-        "after": "15,562"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "423",
-        "after": "14,821"
+        "current": "15,596",
+        "change": "369",
+        "after": "15,965"
       },
       "position": {
         "current": "0",
-        "change": "54",
-        "after": "54"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "TSLA",
-    "action": "BUY",
-    "qty": 4,
-    "limit": 373.84,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,486.80 USD (4 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,486.80 USD"
-      },
-      "equity": {
-        "current": "50,984",
-        "change": "0",
-        "after": "50,984"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "390",
-        "after": "15,508"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "372",
-        "after": "14,769"
-      },
-      "position": {
-        "current": "0",
-        "change": "4",
-        "after": "4"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "UAL",
-    "action": "BUY",
-    "qty": 1,
-    "limit": 112.64,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "112.13 USD (1 Shares)",
-        "commission": "0.00 USD",
-        "total": "112.13 USD"
-      },
-      "equity": {
-        "current": "50,986",
-        "change": "0",
-        "after": "50,986"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "29",
-        "after": "15,147"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "28",
-        "after": "14,426"
-      },
-      "position": {
-        "current": "14",
-        "change": "1",
-        "after": "15"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "VRT",
-    "action": "BUY",
-    "qty": 6,
-    "limit": 252.06,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,507.08 USD (6 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,507.08 USD"
-      },
-      "equity": {
-        "current": "50,986",
-        "change": "0",
-        "after": "50,986"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "396",
-        "after": "15,513"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "377",
-        "after": "14,775"
-      },
-      "position": {
-        "current": "0",
-        "change": "6",
-        "after": "6"
-      },
-      "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
-      "error": null,
-      "warns": [
-        "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED."
-      ],
-      "accruedInterest": null
-    }
-  },
-  {
-    "ticker": "WDAY",
-    "action": "BUY",
-    "qty": 9,
-    "limit": 187.73,
-    "status": 200,
-    "resp": {
-      "amount": {
-        "amount": "1,682.01 USD (9 Shares)",
-        "commission": "0.00 USD",
-        "total": "1,682.01 USD"
-      },
-      "equity": {
-        "current": "50,986",
-        "change": "-1",
-        "after": "50,985"
-      },
-      "initial": {
-        "current": "15,118",
-        "change": "441",
-        "after": "15,559"
-      },
-      "maintenance": {
-        "current": "14,398",
-        "change": "420",
-        "after": "14,818"
-      },
-      "position": {
-        "current": "0",
-        "change": "9",
-        "after": "9"
+        "change": "71",
+        "after": "71"
       },
       "warn": "25/<h4>Confirm Mandatory Cap Price</h4>To avoid trading at a price that is not consistent with a fair and orderly market, IB may set a cap (for a buy order) or floor (for a sell order). THIS MAY CAUSE AN ORDER THAT WOULD OTHERWISE BE MARKETABLE NOT TO BE TRADED.",
       "error": null,

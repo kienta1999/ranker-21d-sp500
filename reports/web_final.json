@@ -1,11 +1,13 @@
 {
-  "netliq": 50952.57,
-  "gross": 65977.9,
+  "netliq": 45432.48,
+  "gross": 56158.4,
   "positions": 40,
-  "cash": -14998.85,
-  "loan": 14998.85,
-  "maint_margin": 16495.2,
-  "excess_liquidity": 34453.59,
-  "day_pnl": 289.3,
-  "unfilled": []
+  "cash": -11377.81,
+  "loan": 11377.81,
+  "maint_margin": 14682.84,
+  "excess_liquidity": 30729.41,
+  "day_pnl": -440.4,
+  "unfilled": [
+    "MRNA SELL Submitted rem=3"
+  ]
 }
